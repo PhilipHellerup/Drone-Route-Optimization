@@ -69,37 +69,70 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for EXECUTABLE target P1_Project_Program
+# Object build statements for STATIC_LIBRARY target branch_and_bound
 
 
 #############################################
-# Order-only phony target for P1_Project_Program
+# Order-only phony target for branch_and_bound
 
-build cmake_object_order_depends_target_P1_Project_Program: phony || .
+build cmake_object_order_depends_target_branch_and_bound: phony || .
 
-build src/CMakeFiles/P1_Project_Program.dir/main.c.obj: C_COMPILER__P1_Project_Program_unscanned_Debug C$:/Users/phili/CLionProjects/P1_Project_Program/src/main.c || cmake_object_order_depends_target_P1_Project_Program
-  DEP_FILE = src\CMakeFiles\P1_Project_Program.dir\main.c.obj.d
+build src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj: C_COMPILER__branch_and_bound_unscanned_Debug C$:/Users/phili/CLionProjects/P1_Project_Program/src/branch_and_bound.c || cmake_object_order_depends_target_branch_and_bound
+  DEP_FILE = src\CMakeFiles\branch_and_bound.dir\branch_and_bound.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = src\CMakeFiles\P1_Project_Program.dir
-  OBJECT_FILE_DIR = src\CMakeFiles\P1_Project_Program.dir
+  INCLUDES = -IC:/Users/phili/CLionProjects/P1_Project_Program/src/.
+  OBJECT_DIR = src\CMakeFiles\branch_and_bound.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\branch_and_bound.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target P1_Project_Program
+# Link build statements for STATIC_LIBRARY target branch_and_bound
 
 
 #############################################
-# Link the executable src\P1_Project_Program.exe
+# Link the static library src\libbranch_and_bound.a
 
-build src/P1_Project_Program.exe: C_EXECUTABLE_LINKER__P1_Project_Program_Debug src/CMakeFiles/P1_Project_Program.dir/main.c.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = src\CMakeFiles\P1_Project_Program.dir
+build src/libbranch_and_bound.a: C_STATIC_LIBRARY_LINKER__branch_and_bound_Debug src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src\CMakeFiles\branch_and_bound.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = src\P1_Project_Program.exe
-  TARGET_IMPLIB = src\libP1_Project_Program.dll.a
-  TARGET_PDB = P1_Project_Program.exe.dbg
+  TARGET_FILE = src\libbranch_and_bound.a
+  TARGET_PDB = branch_and_bound.a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target program
+
+
+#############################################
+# Order-only phony target for program
+
+build cmake_object_order_depends_target_program: phony || cmake_object_order_depends_target_branch_and_bound
+
+build src/CMakeFiles/program.dir/program.c.obj: C_COMPILER__program_unscanned_Debug C$:/Users/phili/CLionProjects/P1_Project_Program/src/program.c || cmake_object_order_depends_target_program
+  DEP_FILE = src\CMakeFiles\program.dir\program.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/phili/CLionProjects/P1_Project_Program/src/.
+  OBJECT_DIR = src\CMakeFiles\program.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\program.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target program
+
+
+#############################################
+# Link the executable src\program.exe
+
+build src/program.exe: C_EXECUTABLE_LINKER__program_Debug src/CMakeFiles/program.dir/program.c.obj | src/libbranch_and_bound.a || src/libbranch_and_bound.a
+  FLAGS = -g
+  LINK_LIBRARIES = src/libbranch_and_bound.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = src\CMakeFiles\program.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = src\program.exe
+  TARGET_IMPLIB = src\libprogram.dll.a
+  TARGET_PDB = program.exe.dbg
 
 
 #############################################
@@ -127,9 +160,13 @@ build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build P1_Project_Program: phony src/P1_Project_Program.exe
+build branch_and_bound: phony src/libbranch_and_bound.a
 
-build P1_Project_Program.exe: phony src/P1_Project_Program.exe
+build libbranch_and_bound.a: phony src/libbranch_and_bound.a
+
+build program: phony src/program.exe
+
+build program.exe: phony src/program.exe
 
 # =============================================================================
 # Folder targets.
@@ -146,7 +183,7 @@ build all: phony src/all
 #############################################
 # Folder: C:/Users/phili/CLionProjects/P1_Project_Program/cmake-build-debug/src
 
-build src/all: phony src/P1_Project_Program.exe
+build src/all: phony src/libbranch_and_bound.a src/program.exe
 
 # =============================================================================
 # Built-in targets

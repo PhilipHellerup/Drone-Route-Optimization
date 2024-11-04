@@ -1,6 +1,25 @@
 # ninja log v6
+142	213	7524425031197923	src/program.exe	e3cda4f75c95c67b
+3	78	7524425029808689	src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj	85a965d5bdc58752
+8	76	7524425029848556	src/CMakeFiles/program.dir/program.c.obj	dd86b7ad4a1b7241
 2	78	7524255966200854	CMakeFiles/P1_Project_Program.dir/main.c.obj	a0f97ed9233f6f3a
 79	152	7524255966975221	P1_Project_Program.exe	66adab8e20801949
-27	340	7524256721060922	build.ninja	ec1281ed1cafecc2
+78	142	7524425030547940	src/libbranch_and_bound.a	d6be5f9f55b4b0a1
+27	340	7524427417537997	build.ninja	ec1281ed1cafecc2
 133	207	7524256598169411	src/P1_Project_Program.exe	8b5c9c7e4724230d
 30	132	7524256597131761	src/CMakeFiles/P1_Project_Program.dir/main.c.obj	91f2ebd4f16e805f
+2	275	7524427417537997	build.ninja	ec1281ed1cafecc2
+29	112	7524427418708440	src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj	85a965d5bdc58752
+3	79	7524427518630398	src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj	85a965d5bdc58752
+3	81	7524427644256972	src/libbranch_and_bound.a	d6be5f9f55b4b0a1
+16	91	7524427644377668	src/CMakeFiles/program.dir/program.c.obj	dd86b7ad4a1b7241
+91	164	7524427645128695	src/program.exe	e3cda4f75c95c67b
+13	85	7524427737272326	src/CMakeFiles/program.dir/program.c.obj	dd86b7ad4a1b7241
+5	85	7524427737196178	src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj	85a965d5bdc58752
+85	150	7524427738004966	src/libbranch_and_bound.a	d6be5f9f55b4b0a1
+150	226	7524427738638147	src/program.exe	e3cda4f75c95c67b
+4	88	7524428757778194	src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj	85a965d5bdc58752
+12	86	7524428834262204	src/CMakeFiles/program.dir/program.c.obj	dd86b7ad4a1b7241
+4	88	7524428834197117	src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj	85a965d5bdc58752
+88	150	7524428835021694	src/libbranch_and_bound.a	d6be5f9f55b4b0a1
+150	226	7524428835648829	src/program.exe	e3cda4f75c95c67b
