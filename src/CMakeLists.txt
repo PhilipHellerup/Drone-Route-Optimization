@@ -1,0 +1,1 @@
+add_executable(P1_Project_Program main.c)

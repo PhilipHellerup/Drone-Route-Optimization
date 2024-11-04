@@ -1,0 +1,5 @@
+C:/Users/phili/CLionProjects/P1_Project_Program/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/phili/CLionProjects/P1_Project_Program/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/phili/CLionProjects/P1_Project_Program/cmake-build-debug/src/CMakeFiles/P1_Project_Program.dir
+C:/Users/phili/CLionProjects/P1_Project_Program/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+C:/Users/phili/CLionProjects/P1_Project_Program/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir

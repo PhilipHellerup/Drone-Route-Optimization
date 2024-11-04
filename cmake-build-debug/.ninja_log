@@ -1,0 +1,6 @@
+# ninja log v6
+2	78	7524255966200854	CMakeFiles/P1_Project_Program.dir/main.c.obj	a0f97ed9233f6f3a
+79	152	7524255966975221	P1_Project_Program.exe	66adab8e20801949
+27	340	7524256721060922	build.ninja	ec1281ed1cafecc2
+133	207	7524256598169411	src/P1_Project_Program.exe	8b5c9c7e4724230d
+30	132	7524256597131761	src/CMakeFiles/P1_Project_Program.dir/main.c.obj	91f2ebd4f16e805f
