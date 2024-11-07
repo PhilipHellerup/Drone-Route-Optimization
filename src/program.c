@@ -2,6 +2,7 @@
 //Libraries Needed:
 #include <stdio.h>
 #include <stdlib.h>
+#include "edge_distance.h"
 #include "branch_and_bound.h"
 
 
@@ -11,13 +12,12 @@
 //the minimum cost and the optimal route:
 int main(void) {
 
-    //Initializing the 2D-array, "matrix[N][N]", which represents the graph, where "N" is the
-    //number of nodes. "matrix[N][N]" is the cost of traveling from node "i" to node "j". A value
-    //of 0 along the diagonal (matrix[i][i] = 0) indicates there is no cost to stay in the same node:
-    int matrix[N][N] = { {0, 10, 15, 20},
-                         {10, 0, 35, 25},
-                         {15, 35, 0, 30},
-                         {20, 25, 30, 0} };
+    //Declaring the 2D-array, "matrix[N][N]", which is going to represent the graph, where "N" is the
+    //number of nodes. "matrix[N][N]" is the cost of traveling from node "i" to node "j".
+    int matrix[N][N];
+
+    //Running "calculate_edges()" function to assign the "matrix" with distances between all the give nodes.
+    calculate_edges(matrix);
 
     //Running the TSP() function, with the "matrix[][]" array as an input parameter:
 

@@ -1,10 +1,4 @@
 
-//Symbolic variables
-
-//Number of nodes:
-#define N 4
-
-
 //Declaration of function prototypes and any other declarations
 void TSP(int matrix[N][N]);
 int first_minimum(int matrix[N][N], int i);

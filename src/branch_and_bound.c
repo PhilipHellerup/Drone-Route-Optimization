@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#include "edge_distance.h"
 #include "branch_and_bound.h"
 
 

@@ -69,6 +69,38 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target edge_distance
+
+
+#############################################
+# Order-only phony target for edge_distance
+
+build cmake_object_order_depends_target_edge_distance: phony || .
+
+build src/CMakeFiles/edge_distance.dir/edge_distance.c.obj: C_COMPILER__edge_distance_unscanned_Debug C$:/Users/phili/CLionProjects/P1_Project_Program/src/edge_distance.c || cmake_object_order_depends_target_edge_distance
+  DEP_FILE = src\CMakeFiles\edge_distance.dir\edge_distance.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/phili/CLionProjects/P1_Project_Program/src/.
+  OBJECT_DIR = src\CMakeFiles\edge_distance.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\edge_distance.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target edge_distance
+
+
+#############################################
+# Link the static library src\libedge_distance.a
+
+build src/libedge_distance.a: C_STATIC_LIBRARY_LINKER__edge_distance_Debug src/CMakeFiles/edge_distance.dir/edge_distance.c.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src\CMakeFiles\edge_distance.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = src\libedge_distance.a
+  TARGET_PDB = edge_distance.a.dbg
+
+# =============================================================================
 # Object build statements for STATIC_LIBRARY target branch_and_bound
 
 
@@ -107,7 +139,7 @@ build src/libbranch_and_bound.a: C_STATIC_LIBRARY_LINKER__branch_and_bound_Debug
 #############################################
 # Order-only phony target for program
 
-build cmake_object_order_depends_target_program: phony || cmake_object_order_depends_target_branch_and_bound
+build cmake_object_order_depends_target_program: phony || cmake_object_order_depends_target_branch_and_bound cmake_object_order_depends_target_edge_distance
 
 build src/CMakeFiles/program.dir/program.c.obj: C_COMPILER__program_unscanned_Debug C$:/Users/phili/CLionProjects/P1_Project_Program/src/program.c || cmake_object_order_depends_target_program
   DEP_FILE = src\CMakeFiles\program.dir\program.c.obj.d
@@ -124,9 +156,9 @@ build src/CMakeFiles/program.dir/program.c.obj: C_COMPILER__program_unscanned_De
 #############################################
 # Link the executable src\program.exe
 
-build src/program.exe: C_EXECUTABLE_LINKER__program_Debug src/CMakeFiles/program.dir/program.c.obj | src/libbranch_and_bound.a || src/libbranch_and_bound.a
+build src/program.exe: C_EXECUTABLE_LINKER__program_Debug src/CMakeFiles/program.dir/program.c.obj | src/libedge_distance.a src/libbranch_and_bound.a || src/libbranch_and_bound.a src/libedge_distance.a
   FLAGS = -g
-  LINK_LIBRARIES = src/libbranch_and_bound.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = src/libedge_distance.a  src/libbranch_and_bound.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = src\CMakeFiles\program.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -162,7 +194,11 @@ build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
 
 build branch_and_bound: phony src/libbranch_and_bound.a
 
+build edge_distance: phony src/libedge_distance.a
+
 build libbranch_and_bound.a: phony src/libbranch_and_bound.a
+
+build libedge_distance.a: phony src/libedge_distance.a
 
 build program: phony src/program.exe
 
@@ -183,7 +219,7 @@ build all: phony src/all
 #############################################
 # Folder: C:/Users/phili/CLionProjects/P1_Project_Program/cmake-build-debug/src
 
-build src/all: phony src/libbranch_and_bound.a src/program.exe
+build src/all: phony src/libedge_distance.a src/libbranch_and_bound.a src/program.exe
 
 # =============================================================================
 # Built-in targets
