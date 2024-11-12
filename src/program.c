@@ -2,40 +2,28 @@
 //Libraries Needed:
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "edge_distance.h"
 #include "branch_and_bound.h"
 
 // Function to load node coordinates from a text file
-void load_nodes_from_file(const char *filename) {
-    FILE *file = fopen(filename, "r");
-    if (file == NULL) {
-        perror("Error opening file");
-        exit(EXIT_FAILURE);
-    }
+Node load_nodes_from_file(const char *filename);
 
-    // Read each line as "node_id x y"
-    int id, x, y;
-    for (int i = 0; i < N && fscanf(file, "%d %d %d", &id, &x, &y) == 3; i++) {
-        nodes[i].x = x;
-        nodes[i].y = y;
-    }
-    fclose(file);
-}
 
 //main() function initializes the problem's data and calls the TSP() function to solve the Traveling
 //Salesman Problem (TSP). Once the TSP() function finds the optimal route, main() function prints
 //the minimum cost and the optimal route:
 int main(void) {
-
-    // Load node coordinates from file
-    load_nodes_from_file("nodes.txt");
-
     //Declaring the 2D-array, "matrix[N][N]", which is going to represent the graph, where "N" is the
     //number of nodes. "matrix[N][N]" is the cost of traveling from node "i" to node "j".
     int matrix[N][N];
 
+    //Array of nodes with their (x, y) coordinates
+    // Load node coordinates from file
+    Node nodes = load_nodes_from_file("assets/addresses.csv");
+
     //Running "calculate_edges()" function to assign the "matrix" with distances between all the give nodes.
-    calculate_edges(matrix);
+    calculate_edges(matrix, &nodes);
 
     //Running the TSP() function, with the "matrix[][]" array as an input parameter:
 
@@ -63,4 +51,62 @@ int main(void) {
 
     //Stops the program successfully:
     return EXIT_SUCCESS;
+}
+
+Node load_nodes_from_file(const char *filename) {
+    Node nodes[N];
+    FILE* fp = fopen(filename, "r");
+
+    if (!fp) {
+        printf("Can't open file\n");
+        printf("filename %s", filename);
+    }
+
+    else {
+        // Here we have taken size of
+        // array 1024 you can modify it
+        char buffer[1024];
+
+        int row = 0;
+        int column = 0;
+
+        while (fgets(buffer, 1024, fp)) {
+            column = 0;
+            row++;
+
+            // Skip the header row if needed
+            if (row == 1)
+                continue;
+
+            // Splitting the data
+            char* value = strtok(buffer, ",");
+
+            while (value) {
+                int value_int = atoi(value); // Convert the entire string to an integer
+
+                // Column 1
+                if (column == 0) {
+                    nodes[row-2].x = value_int;
+                }
+
+                // Column 2
+                else if (column == 1) {
+                    nodes[row-2].y = value_int;
+                }
+
+                value = strtok(NULL, ",");
+                column++;
+            }
+        }
+
+        // Close the file
+        fclose(fp);
+    }
+
+    for (int i = 0; i < N; i++) {
+        printf("nodes[%d].x: %d\n", i, nodes[i].x);
+        printf("nodes[%d].y: %d\n", i, nodes[i].y);
+    }
+
+    return nodes[N-1];
 }

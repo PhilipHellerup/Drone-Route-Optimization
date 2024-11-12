@@ -1,5 +1,6 @@
 
 //Symbolic variables
+#pragma once
 
 //Number of nodes:
 #define N 25
@@ -24,7 +25,7 @@ extern Node nodes[N];       //Can be found in "edge_distance.c" file.
 
 
 //Declaration of function prototypes and any other declarations
-void calculate_edges(int matrix[N][N]);
+void calculate_edges(int matrix[N][N], Node nodes[N]);
 int euclidean_distance(Node start, Node goal);
 
 
