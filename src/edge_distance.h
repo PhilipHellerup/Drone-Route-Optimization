@@ -2,7 +2,7 @@
 //Symbolic variables
 
 //Number of nodes:
-#define N 4
+#define N 25
 
 
 //Structs:

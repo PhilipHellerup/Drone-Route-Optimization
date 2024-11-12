@@ -7,13 +7,7 @@
 //Structs Initializing:
 
 //Array of nodes with their (x, y) coordinates
-Node nodes[N] = {
-    {0, 0},     //Node 0
-    {0, 2},     //Node 1
-    {0, 3},     //Node 2
-    {0, 1}      //Node 3
-    //Node ...
-};
+Node nodes[N];
 
 
 //calculate_edges() is the function that fills the distance matrix, which is used by the Branch & Bound

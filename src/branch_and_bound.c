@@ -238,7 +238,7 @@ void TSP_Recursion(int matrix[N][N], int current_bound, int current_weight, int 
             current_weight += matrix[current_route[level - 1]][i];
 
             //If node "level == 1", it uses the first minimum edge cost from the current and next
-            //nodes:
+            //node:
             if (level == 1) {
                 current_bound -= (first_minimum(matrix, current_route[level - 1])
                                  + first_minimum(matrix, i)) / 2;
