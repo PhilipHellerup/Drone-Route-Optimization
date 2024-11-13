@@ -3,7 +3,7 @@
 #pragma once
 
 //Number of nodes:
-#define N 25
+#define N 20
 
 
 //Structs:
@@ -25,7 +25,8 @@ extern Node nodes[N];       //Can be found in "edge_distance.c" file.
 
 
 //Declaration of function prototypes and any other declarations
-void calculate_edges(int matrix[N][N], Node nodes[N]);
+void calculate_edges(int matrix[N][N], Node nodes[]);
+void printMatrix(int matrix[N][N]);
 int euclidean_distance(Node start, Node goal);
 
 

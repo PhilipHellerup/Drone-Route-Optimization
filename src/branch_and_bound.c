@@ -6,6 +6,8 @@
 #include "edge_distance.h"
 #include "branch_and_bound.h"
 
+#include <stdio.h>
+
 
 //Global variables:
 

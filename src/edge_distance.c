@@ -12,7 +12,7 @@
 
 //calculate_edges() is the function that fills the distance matrix, which is used by the Branch & Bound
 //algorithm to find the shortest route that visits each node exactly once:
-void calculate_edges(int matrix[N][N], Node nodes[N]) {
+void calculate_edges(int matrix[N][N], Node nodes[]) {
 
     //The two nested loops are used to iterate over every possible pair of nodes "(i, j)", where "i" is the
     //row index and "j" is the column index in the distance matrix:
@@ -35,9 +35,15 @@ void calculate_edges(int matrix[N][N], Node nodes[N]) {
         }
 
     }
-
 }
 
+void printMatrix(int matrix[N][N]){
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+                printf("Afstand: %d\n", matrix[i][j]);
+            }
+        }
+    }
 
 //euclidean_distance() function calculates the Euclidean distance between two nodes, "start" and "goal",
 //which are represented by the "Node" structs containing "x" and "y" coordinates. The Euclidean distance is

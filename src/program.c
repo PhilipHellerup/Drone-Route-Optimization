@@ -7,7 +7,7 @@
 #include "branch_and_bound.h"
 
 // Function to load node coordinates from a text file
-Node load_nodes_from_file(const char *filename);
+void load_nodes_from_file(const char *filename, Node nodes[]);
 
 
 //main() function initializes the problem's data and calls the TSP() function to solve the Traveling
@@ -20,10 +20,14 @@ int main(void) {
 
     //Array of nodes with their (x, y) coordinates
     // Load node coordinates from file
-    Node nodes = load_nodes_from_file("assets/addresses.csv");
+    Node nodes[25];
+
+    load_nodes_from_file("/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/assets/addresses.csv", nodes);
 
     //Running "calculate_edges()" function to assign the "matrix" with distances between all the give nodes.
-    calculate_edges(matrix, &nodes);
+    calculate_edges(matrix, nodes);
+
+    printMatrix(matrix);
 
     //Running the TSP() function, with the "matrix[][]" array as an input parameter:
 
@@ -53,8 +57,7 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
-Node load_nodes_from_file(const char *filename) {
-    Node nodes[N];
+void load_nodes_from_file(const char *filename, Node nodes[]) {
     FILE* fp = fopen(filename, "r");
 
     if (!fp) {
@@ -81,6 +84,7 @@ Node load_nodes_from_file(const char *filename) {
             // Splitting the data
             char* value = strtok(buffer, ",");
 
+
             while (value) {
                 int value_int = atoi(value); // Convert the entire string to an integer
 
@@ -101,12 +105,9 @@ Node load_nodes_from_file(const char *filename) {
 
         // Close the file
         fclose(fp);
+        for (int i = 0; i < N; i++) {
+            printf("Node[%d].x = %d\n",i, nodes[i].x);
+            printf("Node[%d].y = %d\n",i, nodes[i].y);
+        }
     }
-
-    for (int i = 0; i < N; i++) {
-        printf("nodes[%d].x: %d\n", i, nodes[i].x);
-        printf("nodes[%d].y: %d\n", i, nodes[i].y);
-    }
-
-    return nodes[N-1];
 }
