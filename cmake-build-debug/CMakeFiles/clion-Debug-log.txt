@@ -1,10 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C -B /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug
--- The C compiler identification is AppleClang 15.0.0.15000040
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Configuring done (0.7s)
+-- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.c" "src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o" "gcc" "src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o.d"
+  "/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c" "src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o" "gcc" "src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -37,14 +37,6 @@ void calculate_edges(int matrix[N][N], Node nodes[]) {
     }
 }
 
-void printMatrix(int matrix[N][N]){
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
-                printf("Afstand: %d\n", matrix[i][j]);
-            }
-        }
-    }
-
 //euclidean_distance() function calculates the Euclidean distance between two nodes, "start" and "goal",
 //which are represented by the "Node" structs containing "x" and "y" coordinates. The Euclidean distance is
 //the "straight-line" distance between two nodes in a 2D plane:

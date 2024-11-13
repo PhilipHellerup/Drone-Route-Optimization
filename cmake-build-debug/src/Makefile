@@ -206,6 +206,36 @@ edge_distance.c.s:
 	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/edge_distance.dir/build.make src/CMakeFiles/edge_distance.dir/edge_distance.c.s
 .PHONY : edge_distance.c.s
 
+load_nodes_from_file.o: load_nodes_from_file.c.o
+.PHONY : load_nodes_from_file.o
+
+# target to build an object file
+load_nodes_from_file.c.o:
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/edge_distance.dir/build.make src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/branch_and_bound.dir/build.make src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/load_nodes_from_file.c.o
+.PHONY : load_nodes_from_file.c.o
+
+load_nodes_from_file.i: load_nodes_from_file.c.i
+.PHONY : load_nodes_from_file.i
+
+# target to preprocess a source file
+load_nodes_from_file.c.i:
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/edge_distance.dir/build.make src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.i
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/branch_and_bound.dir/build.make src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/load_nodes_from_file.c.i
+.PHONY : load_nodes_from_file.c.i
+
+load_nodes_from_file.s: load_nodes_from_file.c.s
+.PHONY : load_nodes_from_file.s
+
+# target to generate assembly for a file
+load_nodes_from_file.c.s:
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/edge_distance.dir/build.make src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.s
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/branch_and_bound.dir/build.make src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/load_nodes_from_file.c.s
+.PHONY : load_nodes_from_file.c.s
+
 program.o: program.c.o
 .PHONY : program.o
 
@@ -247,6 +277,9 @@ help:
 	@echo "... edge_distance.o"
 	@echo "... edge_distance.i"
 	@echo "... edge_distance.s"
+	@echo "... load_nodes_from_file.o"
+	@echo "... load_nodes_from_file.i"
+	@echo "... load_nodes_from_file.s"
 	@echo "... program.o"
 	@echo "... program.i"
 	@echo "... program.s"

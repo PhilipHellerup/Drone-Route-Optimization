@@ -83,17 +83,33 @@ src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s"
 	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.c -o CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s
 
+src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o: src/CMakeFiles/branch_and_bound.dir/flags.make
+src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
+src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o: src/CMakeFiles/branch_and_bound.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o"
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o -MF CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o.d -o CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
+
+src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i"
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c > CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i
+
+src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s"
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c -o CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s
+
 # Object files for target branch_and_bound
 branch_and_bound_OBJECTS = \
-"CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o"
+"CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o" \
+"CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o"
 
 # External object files for target branch_and_bound
 branch_and_bound_EXTERNAL_OBJECTS =
 
 src/libbranch_and_bound.a: src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o
+src/libbranch_and_bound.a: src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o
 src/libbranch_and_bound.a: src/CMakeFiles/branch_and_bound.dir/build.make
 src/libbranch_and_bound.a: src/CMakeFiles/branch_and_bound.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libbranch_and_bound.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libbranch_and_bound.a"
 	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && $(CMAKE_COMMAND) -P CMakeFiles/branch_and_bound.dir/cmake_clean_target.cmake
 	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/branch_and_bound.dir/link.txt --verbose=$(VERBOSE)
 

@@ -86,8 +86,11 @@ src/CMakeFiles/program.dir/program.c.o: /Users/jacoblarsen/Documents/GitHub/P1-P
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/wait.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
   /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.h \
-  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.h
+  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.h \
+  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_data_from_file.h
 
+
+/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_data_from_file.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/stdio.h:
 

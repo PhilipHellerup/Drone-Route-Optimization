@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/edge_distance.dir/edge_distance.c.o"
   "CMakeFiles/edge_distance.dir/edge_distance.c.o.d"
+  "CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o"
+  "CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o.d"
   "libedge_distance.a"
   "libedge_distance.pdb"
 )

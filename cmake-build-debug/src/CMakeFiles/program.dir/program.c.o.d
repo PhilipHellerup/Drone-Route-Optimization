@@ -84,4 +84,5 @@ src/CMakeFiles/program.dir/program.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/secure/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/secure/_string.h \
   /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/./edge_distance.h \
-  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/./branch_and_bound.h
+  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/./branch_and_bound.h \
+  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/./load_nodes_from_file.h
