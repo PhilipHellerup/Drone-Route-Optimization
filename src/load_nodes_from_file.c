@@ -3,10 +3,7 @@
 //
 
 #include "load_nodes_from_file.h"
-
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 int get_delivery_point_count(const char *filename) {
     // Create a counter to return, count in initialized as 1, because the last line does not contain a linebreak "\n"
@@ -32,7 +29,7 @@ int get_delivery_point_count(const char *filename) {
     }
 }
 
-// Scanset [1-9] eller [^,]
+
 void load_nodes_from_file(const char *inputfile, Node nodes_array[], int node_count) {
     // Using the implemented FILE struct from C to create a pointer to a files location
     FILE* fp = fopen(inputfile, "r");
