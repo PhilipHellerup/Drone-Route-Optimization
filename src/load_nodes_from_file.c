@@ -9,8 +9,8 @@
 #include <string.h>
 
 int get_delivery_point_count(const char *filename) {
-    // Create a counter to return
-    int count = 0;
+    // Create a counter to return, count in initialized as 1, because the last line does not contain a linebreak "\n"
+    int count = 1;
 
     // Using the implemented FILE struct from C to create a pointer to a files location
     FILE* filepointer = fopen(filename, "r");

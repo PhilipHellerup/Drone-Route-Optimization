@@ -92,8 +92,7 @@ src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o: /Users/jacoblarsen/Doc
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
   /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.h \
-  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.h \
-  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.h
+  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.h
 
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/Availability.h \
