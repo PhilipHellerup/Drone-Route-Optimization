@@ -9,7 +9,7 @@
 
 
 //Declaration of function prototypes and any other declarations
-void calculate_edges(int matrix[N][N], Node nodes[]);
+void calculate_edges(int size, int matrix[size][size], Node nodes[]);
 int euclidean_distance(Node start, Node goal);
 
 

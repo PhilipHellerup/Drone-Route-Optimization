@@ -180,11 +180,11 @@ int second_minimum(int size, int matrix[size][size], int i) {
 //solution ("final_result"). It updates the best route and cost as it finds better (faster) solutions:
 void TSP_Recursion(int size, int matrix[size][size], int current_bound, int current_weight, int level, int current_route[], int *final_result, int visited[], int final_route[]) {
 
-    for (int i = 0; i < size; i++) {
+   /* for (int i = 0; i < size; i++) {
         printf("Current route: ");
         printf("%d ", current_route[i]);
     }
-    printf("\n");
+    printf("\n"); */
 
     //When "level == N", it means all nodes have been visited:
     if (level == size) {
@@ -199,7 +199,7 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
 
             //Check if "current_result" is less than "final_result" (the minimum cost found so far),
             //it updates "final_result" and saves the route by calling/running copy_To_Final() function:
-            printf("%d, %d\n", current_result, *final_result);
+           // printf("%d, %d\n", current_result, *final_result);
             if (current_result < *final_result) {
                 copy_To_Final(size, current_route, final_route);
                 *final_result = current_result;
@@ -251,7 +251,7 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
             //remaining route.
 
             //Checks if the sum of "current_bound" + "current_weight" is less than "final_results".
-            printf("Current bound: %d, Current weight: %d, Best distance result so far%d\n", current_bound, current_weight, *final_result);
+            //printf("Current bound: %d, Current weight: %d, Best distance result so far%d\n", current_bound, current_weight, *final_result);
             if (current_bound + current_weight < *final_result) {
 
                 //If true, it will continue exploring this route so:

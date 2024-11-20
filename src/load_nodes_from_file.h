@@ -4,10 +4,7 @@
 
 #ifndef LOAD_NODES_FROM_FILE_H
 #define LOAD_NODES_FROM_FILE_H
-
-//Number of nodes:
 #pragma once
-#define N 20
 
 //Node struct to hold the coordinates of all the different nodes:
 typedef struct {

@@ -30,7 +30,7 @@ int main(void) {
     load_nodes_from_file(filepath, nodes_array, node_count);
 
     //Running "calculate_edges()" function to assign the "matrix" with distances between all the give nodes.
-    calculate_edges(matrix, nodes_array);
+    calculate_edges(node_count, matrix, nodes_array);
 
     // Define variables for final_result, the distance covered, and final_route, an array representing the best route
     int final_result = INT_MAX;
@@ -56,7 +56,7 @@ int main(void) {
     //Given that "final_route[N]" is set to "final_route[0]" (the starting node), this for-loop
     //iterates through the route, showing a complete route cycle, that
     //begins and ends in the starting node:
-    for (int i = 0; i <= N; i++) {
+    for (int i = 0; i <= node_count; i++) {
         printf("%d ", final_route[i]);
     }
 
