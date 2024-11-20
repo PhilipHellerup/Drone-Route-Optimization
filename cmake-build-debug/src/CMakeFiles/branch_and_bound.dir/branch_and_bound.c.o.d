@@ -81,7 +81,6 @@ src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/arm/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/arm/_limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/syslimits.h \
-  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/./edge_distance.h \
   /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/./branch_and_bound.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_stdio.h \

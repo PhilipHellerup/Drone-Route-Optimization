@@ -1,5 +1,6 @@
 
 //Libraries Needed:
+#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -23,13 +24,17 @@ int main(void) {
 
     //Declaring the 2D-array, "matrix[][]", which is going to represent the graph
     //number of nodes. "matrix[][]" is the cost of traveling from node "i" to node "j".
-    int matrix[node_count-1][node_count-1]; // Fix this.
+    int matrix[node_count][node_count]; // Fix this.
 
     // Load (x and y) coordinates from file into node in the array
     load_nodes_from_file(filepath, nodes_array, node_count);
 
     //Running "calculate_edges()" function to assign the "matrix" with distances between all the give nodes.
     calculate_edges(matrix, nodes_array);
+
+    // Define variables for final_result, the distance covered, and final_route, an array representing the best route
+    int final_result = INT_MAX;
+    int final_route[node_count];
 
     //Running the TSP() function, with the "matrix[][]" array as an input parameter:
 
@@ -38,7 +43,7 @@ int main(void) {
 
     //During this process, the function updates "final_result" with the minimum cost and "final_route"
     //with the order of nodes in that optimal route.
-    TSP(matrix);
+    TSP(node_count, matrix, &final_result, final_route);
 
     //After the TSP() function completes, main() function outputs the minimum cost and the optimal route:
 
