@@ -4,7 +4,10 @@
 #include <string.h>
 #include <limits.h>
 #include "branch_and_bound.h"
+
+#include <stdbool.h>
 #include <stdio.h>
+#include <tgmath.h>
 
 
 //TSP() function sets up the initial values and calls the recursion function, TSP_Recursion() to solve
@@ -172,12 +175,53 @@ int second_minimum(int size, int matrix[size][size], int i) {
 
 }
 
+// ********************* (DELETE IF NOT USED) ************************
+double count = 0;
+int buffer = 100000;
+int last_printed;
+int message_print_state = false;
+
+// ***************** (TO HERE) **************************************
 
 //TSP_Recursion() function is the building stone of the recursive Branch and Bound algorithm used to
 //solve the Traveling Salesman Problem (TSP). This function explores potential routes recursively,
 //calculates cost, and excludes routes, that is greater in cost than the current best known
 //solution ("final_result"). It updates the best route and cost as it finds better (faster) solutions:
 void TSP_Recursion(int size, int matrix[size][size], int current_bound, int current_weight, int level, int current_route[], int *final_result, int visited[], int final_route[]) {
+    /// Loading sequence for user experience. Temporary ********** (DELETE THIS IF NOT USED) ***********
+    count ++;
+
+    if (count > buffer) {
+        int load_percent = round(count / 18500000 * 100);
+        if (load_percent < 100 && load_percent > last_printed + 1) {
+            if (load_percent < 10) {
+                for (int i = 0; i < 11; i++) {
+                    printf("\b");
+                }
+            } else {
+                for (int i = 0; i < 12; i++) {
+                    printf("\b");
+                }
+            }
+            printf("Loading:\033[32;1m %d%%\033[0m", (load_percent));
+            last_printed = load_percent;
+            buffer += 100000;
+            fflush(stdout);
+
+        } else if (load_percent >= 100 && !message_print_state) {
+            for (int i = 0; i < 12; i++) {
+                printf("\b");
+            }
+            printf("Loading:\033[32;1m 100%%\033[0m");
+            fflush(stdout);
+
+            printf("\n \n");
+            printf("\033[32;1mCalculations complete! Returning best route: \033[0m\n");
+            message_print_state = true;
+        }
+    }
+
+    /// ***************************** (TO HERE) ****************************
 
     //When "level == size", it means all nodes have been visited:
     if (level == size) {
