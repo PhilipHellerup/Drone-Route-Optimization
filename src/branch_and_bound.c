@@ -4,6 +4,7 @@
 #include <string.h>
 #include <limits.h>
 #include "branch_and_bound.h"
+#include <stdio.h>
 
 
 //TSP() function sets up the initial values and calls the recursion function, TSP_Recursion() to solve
@@ -177,8 +178,6 @@ int second_minimum(int size, int matrix[size][size], int i) {
 //calculates cost, and excludes routes, that is greater in cost than the current best known
 //solution ("final_result"). It updates the best route and cost as it finds better (faster) solutions:
 void TSP_Recursion(int size, int matrix[size][size], int current_bound, int current_weight, int level, int current_route[], int *final_result, int visited[], int final_route[]) {
-
-   ///// Here ewe could implement some cool loading stuff or something showing the current route on a chart ********(DELTE THIS IF NOT USED)********
 
     //When "level == size", it means all nodes have been visited:
     if (level == size) {
