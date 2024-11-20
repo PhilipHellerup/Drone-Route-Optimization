@@ -17,45 +17,44 @@ int main(void) {
     const char* filepath = "assets/addresses.csv";
 
     // Get the size of the array, using "get_delivery_point_count()"
+    // This function counts the number of nodes in the file
     const int node_count = get_delivery_point_count(filepath);
 
-    // Declaring an array to store the delivery coordinates for all the households in the list
+    // Declaring an array to store the delivery coordinates for all the households in the list.
+    // The size of the array, is given by the number og nodes in the file
     Node nodes_array[node_count];
 
-    //Declaring the 2D-array, "matrix[][]", which is going to represent the graph
-    //number of nodes. "matrix[][]" is the cost of traveling from node "i" to node "j".
+    // Declaring the 2D-array, "matrix[][]", which is going to represent the graph,
+    // with each value inside of matrix[i][j], representing the cost of traveling from node "i" to node "j".
     int matrix[node_count][node_count]; // Fix this.
 
-    // Load (x and y) coordinates from file into node in the array
+    // Load (x and y) coordinates from file into node in the array.
     load_nodes_from_file(filepath, nodes_array, node_count);
 
-    //Running "calculate_edges()" function to assign the "matrix" with distances between all the give nodes.
+    // Running "calculate_edges()" function to assign the "matrix" with distances between all the give nodes.
     calculate_edges(node_count, matrix, nodes_array);
 
     // Define variables for final_result, the distance covered, and final_route, an array representing the best route
+    // Final_result is set to maximum integer value, and the size of final_route is set to node_count.
     int final_result = INT_MAX;
     int final_route[node_count];
 
-    //Running the TSP() function, with the "matrix[][]" array as an input parameter:
-
-    //Inside the TSP() function, the algorithm calculates the optimal route, that visits each
-    //node exactly once and returns to the starting node, minimizing the travel cost.
-
-    //During this process, the function updates "final_result" with the minimum cost and "final_route"
-    //with the order of nodes in that optimal route.
+    // Running the TSP() function, with the "matrix[][]" array as an input parameter:
+    // Inside the TSP() function, the algorithm calculates the optimal route, that visits each
+    // node exactly once and returns to the starting node, minimizing the travel cost.
+    // During this process, the function updates "final_result" through a pointer with the minimum cost,
+    // and "final_route" with the sequence of nodes in that optimal route.
     TSP(node_count, matrix, &final_result, final_route);
 
-    //After the TSP() function completes, main() function outputs the minimum cost and the optimal route:
+    // After the TSP() function completes, main() function outputs the minimum cost and the optimal route:
 
-    //Prints the lowest travel cost found.
+    // Prints the lowest travel cost found.
     printf("Minimum cost: %d\n", final_result);
 
-    //Prints the order of nodes in the optimal route:
+    // Prints the sequence of nodes in the optimal route:
+    // This for-loop iterates through the route, showing a complete route cycle,
+    // that begins and ends in the starting node:
     printf("Path Taken: ");
-
-    //Given that "final_route[N]" is set to "final_route[0]" (the starting node), this for-loop
-    //iterates through the route, showing a complete route cycle, that
-    //begins and ends in the starting node:
     for (int i = 0; i <= node_count; i++) {
         printf("%d ", final_route[i]);
     }

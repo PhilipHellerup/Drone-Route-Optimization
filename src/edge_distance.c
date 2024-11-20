@@ -2,17 +2,11 @@
 //Libraries Needed
 #include <math.h>
 #include "edge_distance.h"
-
-#include <stdio.h>
 #include <stdlib.h>
-
-
-//Structs Initializing:
-
 
 //calculate_edges() is the function that fills the distance matrix, which is used by the Branch & Bound
 //algorithm to find the shortest route that visits each node exactly once:
-void calculate_edges(int size, int matrix[size][size], Node nodes[]) {
+void calculate_edges(const int size, int matrix[size][size], Node nodes[]) {
 
     //The two nested loops are used to iterate over every possible pair of nodes "(i, j)", where "i" is the
     //row index and "j" is the column index in the distance matrix:

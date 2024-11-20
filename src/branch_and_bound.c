@@ -5,8 +5,6 @@
 #include <limits.h>
 #include "branch_and_bound.h"
 
-#include <stdio.h>
-
 
 //TSP() function sets up the initial values and calls the recursion function, TSP_Recursion() to solve
 //the Traveling Salesman Problem (TSP) using the Branch and Bound algorithm. The function initialized
@@ -14,12 +12,12 @@
 //the optimal route (in this case the fastest route, which means the route that has the lowest cost):
 void TSP(int size, int matrix[size][size],int* final_result, int final_route[]) {
 
-
+    //Declaration of visited array, keeping track of the already visited nodes
     int visited[size];
 
     //Initializing the "current_route[]" array, which will store the current route of nodes being explored.
-    //It has "N+1" elements, which makes it so it can store a full route, that includes returning to
-    //the starting node:
+    //It has "size+1" elements, which makes it so it can store a full route, that includes returning to
+    //the starting node, hence the + 1:
     int current_route[size + 1];
 
     //Initializing "current_bound" variable, which represents an initial lower bound of the travel cost.
@@ -84,7 +82,7 @@ void TSP(int size, int matrix[size][size],int* final_result, int final_route[]) 
 //explored further or excluded/pruned:
 
 //Input parameters:
-//matrix[N][N] = The adjacency matrix of the graph, where matrix[i][j] represent the cost of going
+//matrix[][] = The adjacency matrix of the graph, where matrix[i][j] represent the cost of going
 //from node i to node j.
 //i = The index of the node for which we want to find the minimum outgoing edge cost.
 
@@ -121,7 +119,7 @@ int first_minimum(int size, int matrix[size][size], int i) {
 //which helps to better estimate the minimum cost for a route.
 
 //Input parameters:
-//matrix[N][N] = The adjacency matrix of the graph, where matrix[i][j] represent the cost of going
+//matrix[][] = The adjacency matrix of the graph, where matrix[i][j] represent the cost of going
 //from node i to node j.
 //i = The index of the node for which we want to find the second minimum outgoing edge cost.
 
@@ -180,13 +178,9 @@ int second_minimum(int size, int matrix[size][size], int i) {
 //solution ("final_result"). It updates the best route and cost as it finds better (faster) solutions:
 void TSP_Recursion(int size, int matrix[size][size], int current_bound, int current_weight, int level, int current_route[], int *final_result, int visited[], int final_route[]) {
 
-   /* for (int i = 0; i < size; i++) {
-        printf("Current route: ");
-        printf("%d ", current_route[i]);
-    }
-    printf("\n"); */
+   ///// Here ewe could implement some cool loading stuff or something showing the current route on a chart ********(DELTE THIS IF NOT USED)********
 
-    //When "level == N", it means all nodes have been visited:
+    //When "level == size", it means all nodes have been visited:
     if (level == size) {
 
         //Checks if there's a route back to the starting node (ensuring the route is a complete cycle).
@@ -217,7 +211,7 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
 
     }
 
-    //For levels below "N", the function iterates over all nodes (i = 0 to N - 1) to find potential
+    //For levels below "size", the function iterates over all nodes (i = 0 to N - 1) to find potential
     //nodes to visit next:
     for (int i = 0; i < size; i++) {
 
@@ -275,7 +269,7 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
             current_weight -= matrix[current_route[level - 1]][i];
             current_bound = temp;
 
-            //The "visited[]" node just backtracked from is reset to mark only nodes up to the current level as visited,
+            //In the "visited[]" array, the node just backtracked from is reset to mark only nodes up to the current level as visited,
             //ensuring each recursive call works with an accurate state.
             visited[i] = 0;
         }
@@ -295,14 +289,14 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
 void copy_To_Final(int size, int current_route[], int final_route[]) {
 
     //This for-loop copies each node from "current_route[]" to "final_route[]". Iterates through
-    //the first "N" elements in "current_route[]", which represents nodes visited in the current
+    //the first elements in "current_route[]" up to "i < size", which represents nodes visited in the current
     //route, and copies them into "final_route[]":
     for (int i = 0; i < size; i++) {
         final_route[i] = current_route[i];
 
     }
 
-    //After the for-loop has been terminated it sets "final_route[N]" to "current_route[0]". This
+    //After the for-loop has been terminated it sets "final_route[]" to "current_route[0]". This
     //completes the route, by returning to the starting node, so "final_route[]" will now represent
     //a full route cycle:
     final_route[size] = current_route[0];
