@@ -10,7 +10,7 @@
 					[
 						1
 					],
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.29"
@@ -20,7 +20,7 @@
 				},
 				{
 					"build" : "src",
-					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.29"
@@ -59,21 +59,21 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "branch_and_bound::@145eef247bfb46b6828c",
-					"jsonFile" : "target-branch_and_bound-Debug-96651eb900f998c8ecf6.json",
+					"jsonFile" : "target-branch_and_bound-Debug-7b07408001fc3d16810d.json",
 					"name" : "branch_and_bound",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "edge_distance::@145eef247bfb46b6828c",
-					"jsonFile" : "target-edge_distance-Debug-0a28103d5a2ce64f3aef.json",
+					"jsonFile" : "target-edge_distance-Debug-84a07f8485178d154be8.json",
 					"name" : "edge_distance",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "program::@145eef247bfb46b6828c",
-					"jsonFile" : "target-program-Debug-0625cd2368be975e9655.json",
+					"jsonFile" : "target-program-Debug-1a4106388005ea297098.json",
 					"name" : "program",
 					"projectIndex" : 0
 				}
@@ -83,8 +83,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/phili/CLionProjects/P1_Project_Program/cmake-build-debug",
-		"source" : "C:/Users/phili/CLionProjects/P1_Project_Program"
+		"build" : "/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug",
+		"source" : "/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C"
 	},
 	"version" : 
 	{

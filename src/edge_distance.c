@@ -2,23 +2,17 @@
 //Libraries Needed
 #include <math.h>
 #include "edge_distance.h"
-
-
-//Structs Initializing:
-
-//Array of nodes with their (x, y) coordinates
-Node nodes[N];
-
+#include <stdlib.h>
 
 //calculate_edges() is the function that fills the distance matrix, which is used by the Branch & Bound
 //algorithm to find the shortest route that visits each node exactly once:
-void calculate_edges(int matrix[N][N]) {
+void calculate_edges(const int size, int matrix[size][size], Node nodes[]) {
 
     //The two nested loops are used to iterate over every possible pair of nodes "(i, j)", where "i" is the
     //row index and "j" is the column index in the distance matrix:
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < size; i++) {
 
-        for (int j = 0; j < N; j++) {
+        for (int j = 0; j < size; j++) {
 
             //If "i" is equal to "j", it sets "matrix[i][j]" to "0", given that the distance from a node
             //to itself is 0. It avoids unnecessary calculations and also keeps the Branch & Bound algorithm
@@ -35,9 +29,7 @@ void calculate_edges(int matrix[N][N]) {
         }
 
     }
-
 }
-
 
 //euclidean_distance() function calculates the Euclidean distance between two nodes, "start" and "goal",
 //which are represented by the "Node" structs containing "x" and "y" coordinates. The Euclidean distance is

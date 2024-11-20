@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libedge_distance.a CMakeFiles/edge_distance.dir/edge_distance.c.o CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libedge_distance.a

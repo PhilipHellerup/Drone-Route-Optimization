@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libbranch_and_bound.a CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libbranch_and_bound.a
