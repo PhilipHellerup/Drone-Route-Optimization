@@ -8,11 +8,28 @@
 #include "branch_and_bound.h"
 #include <load_nodes_from_file.h>
 
+#ifdef _WIN32
+#include <windows.h>
+void enable_virtual_terminal_processing() {
+    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    if (hOut == INVALID_HANDLE_VALUE) return;
+
+    DWORD dwMode = 0;
+    if (!GetConsoleMode(hOut, &dwMode)) return;
+
+    dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+    SetConsoleMode(hOut, dwMode);
+}
+#endif
 
 //main() function initializes the problem's data and calls the TSP() function to solve the Traveling
 //Salesman Problem (TSP). Once the TSP() function finds the optimal route, main() function prints
 //the minimum cost and the optimal route:
 int main(void) {
+
+#ifdef _WIN32
+    enable_virtual_terminal_processing();
+#endif
     // Store the filepath of the input document in a variable
     const char* filepath = "assets/addresses.csv";
 
