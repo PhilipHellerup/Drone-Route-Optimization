@@ -188,7 +188,9 @@ int message_print_state = false;
 //calculates cost, and excludes routes, that is greater in cost than the current best known
 //solution ("final_result"). It updates the best route and cost as it finds better (faster) solutions:
 void TSP_Recursion(int size, int matrix[size][size], int current_bound, int current_weight, int level, int current_route[], int *final_result, int visited[], int final_route[]) {
+
     /// Loading sequence for user experience. Temporary ********** (DELETE THIS IF NOT USED) ***********
+    /// // This only works for 20 node list, if the node count is changed 1850000 needs to be changed also
     count ++;
 
     if (count > buffer) {
