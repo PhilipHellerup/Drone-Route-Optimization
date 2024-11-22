@@ -20,7 +20,7 @@ int get_delivery_point_count(const char *filepath) {
     }
 
     // Create a counter to return the total number og nodes
-    int count = 0;
+    int count = -1;
     // Each character in the file is read, until it is equal to the value of "EOF" (end-of-file)
     for (char c = getc(filepointer); c != EOF; c = getc(filepointer))
         if (c == '\n') // Increment count for each newline in the file

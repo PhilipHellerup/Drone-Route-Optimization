@@ -37,12 +37,11 @@ int main(void) {
 
     // This function generates a random list of addresses
     // The function uses the filepath and an integer representing the amount of nodes wanted
-    generate_addresses(filepath, 15);
+    generate_addresses(filepath, 20);
 
     // Get the size of the array, using "get_delivery_point_count()"
     // This function counts the number of nodes in the file
     const int node_count = get_delivery_point_count(filepath);
-
     // Declaring an array to store the delivery coordinates for all the households in the list.
     // The size of the array, is given by the number og nodes in the file
     Node nodes_array[node_count];
