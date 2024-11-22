@@ -8,6 +8,8 @@
 #include "branch_and_bound.h"
 #include <load_nodes_from_file.h>
 
+#include "address_generator.h"
+
 #ifdef _WIN32
 #include <windows.h>
 void enable_virtual_terminal_processing() {
@@ -32,6 +34,10 @@ int main(void) {
 #endif
     // Store the filepath of the input document in a variable
     const char* filepath = "assets/addresses.csv";
+
+    // This function generates a random list of addresses
+    // The function uses the filepath and an integer representing the amount of nodes wanted
+    generate_addresses(filepath, 15);
 
     // Get the size of the array, using "get_delivery_point_count()"
     // This function counts the number of nodes in the file
