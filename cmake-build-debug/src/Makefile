@@ -158,6 +158,30 @@ program/fast:
 	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/build
 .PHONY : program/fast
 
+address_generator.o: address_generator.c.o
+.PHONY : address_generator.o
+
+# target to build an object file
+address_generator.c.o:
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/address_generator.c.o
+.PHONY : address_generator.c.o
+
+address_generator.i: address_generator.c.i
+.PHONY : address_generator.i
+
+# target to preprocess a source file
+address_generator.c.i:
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/address_generator.c.i
+.PHONY : address_generator.c.i
+
+address_generator.s: address_generator.c.s
+.PHONY : address_generator.s
+
+# target to generate assembly for a file
+address_generator.c.s:
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/address_generator.c.s
+.PHONY : address_generator.c.s
+
 branch_and_bound.o: branch_and_bound.c.o
 .PHONY : branch_and_bound.o
 
@@ -271,6 +295,9 @@ help:
 	@echo "... branch_and_bound"
 	@echo "... edge_distance"
 	@echo "... program"
+	@echo "... address_generator.o"
+	@echo "... address_generator.i"
+	@echo "... address_generator.s"
 	@echo "... branch_and_bound.o"
 	@echo "... branch_and_bound.i"
 	@echo "... branch_and_bound.s"

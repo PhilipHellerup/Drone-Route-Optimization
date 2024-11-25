@@ -8,14 +8,15 @@
 // This functions takes in the filepath to the input file as its only parameter.
 // Each newline symbol ("\n") is counted, to return the number of nodes in the file
 // Hence the last row does not contain a newline, we do not skip the header row.
-int get_delivery_point_count(const char *filepath) {
+
+int get_delivery_point_count(const char *filename) {
     // Using the implemented FILE struct from C to create a pointer to a files location
-    FILE* filepointer = fopen(filepath, "r");
+    FILE* filepointer = fopen(filename, "r");
 
     // If the file is not found, print it to the user and return
     if (!filepointer) {
         printf("Can't open file\n");
-        printf("filename %s", filepath);
+        printf("filepath %s", filename);
         return -1;
     }
 
