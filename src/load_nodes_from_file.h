@@ -8,4 +8,4 @@ typedef struct {
 
 //Declaration of function prototypes
 void load_nodes_from_file(const char *filepath, Node nodes_array[], int node_count);
-int get_delivery_point_count(const char* filename);
+int get_node_count(const char* filename);

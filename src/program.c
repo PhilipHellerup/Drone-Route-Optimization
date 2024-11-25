@@ -41,9 +41,7 @@ int main(void) {
 
     // Get the size of the array, using "get_delivery_point_count()"
     // This function counts the number of nodes in the file
-    const int node_count = get_delivery_point_count(filepath);
-    // Declaring an array to store the delivery coordinates for all the households in the list.
-    // The size of the array, is given by the number og nodes in the file
+    const int node_count = get_node_count(filepath);
 
     Node nodes_array[node_count];
 

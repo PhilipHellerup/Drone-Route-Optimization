@@ -9,7 +9,7 @@
 // Each newline symbol ("\n") is counted, to return the number of nodes in the file
 // Hence the last row does not contain a newline, we do not skip the header row.
 
-int get_delivery_point_count(const char *filename) {
+int get_node_count(const char *filename) {
     // Using the implemented FILE struct from C to create a pointer to a files location
     FILE* filepointer = fopen(filename, "r");
 
