@@ -44,6 +44,7 @@ int main(void) {
     const int node_count = get_delivery_point_count(filepath);
     // Declaring an array to store the delivery coordinates for all the households in the list.
     // The size of the array, is given by the number og nodes in the file
+
     Node nodes_array[node_count];
 
     // Declaring the 2D-array, "matrix[][]", which is going to represent the graph,
