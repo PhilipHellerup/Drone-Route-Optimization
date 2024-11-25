@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/program.dir/address_generator.c.o"
+  "CMakeFiles/program.dir/address_generator.c.o.d"
   "CMakeFiles/program.dir/load_nodes_from_file.c.o"
   "CMakeFiles/program.dir/load_nodes_from_file.c.o.d"
   "CMakeFiles/program.dir/program.c.o"
