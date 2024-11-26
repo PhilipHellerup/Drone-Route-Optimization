@@ -47,7 +47,8 @@ int main(void) {
 
     // Declaring the 2D-array, "matrix[][]", which is going to represent the graph,
     // with each value inside of matrix[i][j], representing the cost of traveling from node "i" to node "j".
-    int matrix[node_count][node_count]; // Fix this.
+
+    int matrix[node_count][node_count];
 
     // Load (x and y) coordinates from file into node in the array.
     load_nodes_from_file(filepath, nodes_array, node_count);
