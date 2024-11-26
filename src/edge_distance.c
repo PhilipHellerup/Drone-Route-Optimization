@@ -41,24 +41,19 @@ void calculate_edges(const int node_count, int matrix[node_count][node_count], N
  * @param goal end node
  * @return distance
  */
-int euclidean_distance(Node start, Node goal) {
+int euclidean_distance(const Node start, const Node goal) {
+        // Using abs() to calculate the absolute difference between 'x' and 'y' coordinates.
+        int dx = abs(goal.x - start.x);
+        int dy = abs(goal.y - start.y);
 
-        //Initializing the variable "dx" and "dy". "dx" is the horizontal distance between the two nodes and
-        //"dy" is the vertical distance between the two nodes:
-        int dx = abs(goal.x - start.x); //Calculates the difference between the x-coordinates of the two nodes.
-        int dy = abs(goal.y - start.y); //Calculates the difference between the y-coordinates of the two nodes.
+        // Returning the distance between the two nodes.
+        return (int)(sqrt(dx*dx + dy*dy) + 0.5); // Adding 0,5 before casting to an int, to round to nearest integer
+}
+//Finding the Euclidean distance between the "start" and "goal" node:
 
-        //Finding the Euclidean distance between the "start" and "goal" node:
+//"dx * dx + dy * dy" applies the Pythagorean theorem to find the square of the
+//Euclidean distance. By squaring both "dx" and "dy", then adding the results, we get the square of
+//the straight-line distance.
 
-        //"dx * dx + dy * dy" applies the Pythagorean theorem to find the square of the
-        //Euclidean distance. By squaring both "dx" and "dy", then adding the results, we get the square of
-        //the straight-line distance.
-
-        //The "sqrt()" function takes the square root of the sum, which results in the Euclidean distance between
-        //the "start" and "goal" node.
-
-        //Rounding up with "+0.5" before casting the equation to an "int", which result in the expression being
-        //rounded to the nearest integer.
-        return (int)(sqrt(dx * dx + dy * dy) + 0.5);
-
-    }
+//The "sqrt()" function takes the square root of the sum, which results in the Euclidean distance between
+//the "start" and "goal" node.
