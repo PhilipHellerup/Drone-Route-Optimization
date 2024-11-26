@@ -6,11 +6,18 @@
 
 //calculate_edges() is the function that fills the distance matrix, which is used by the Branch & Bound
 //algorithm to find the shortest route that visits each node exactly once:
-void calculate_edges(const int size, int matrix[size][size], Node nodes[]) {
+
+/**
+ *
+ * @param node_count number of nodes
+ * @param matrix matrix stores edge weights
+ * @param nodes array of all nodes
+ */
+void calculate_edges(const int node_count, int matrix[node_count][node_count], Node nodes[]) {
     //The two nested loops are used to iterate over every possible pair of nodes "(i, j)", where "i" is the
     //row index and "j" is the column index in the distance matrix:
-    for (int i = 0; i < size; i++) {
-        for (int j = i; j < size; j++) {
+    for (int i = 0; i < node_count; i++) {
+        for (int j = i; j < node_count; j++) {
 
             // If i == j is set to zero as this is distance to self
             if (i == j) {
@@ -28,7 +35,13 @@ void calculate_edges(const int size, int matrix[size][size], Node nodes[]) {
 //euclidean_distance() function calculates the Euclidean distance between two nodes, "start" and "goal",
 //which are represented by the "Node" structs containing "x" and "y" coordinates. The Euclidean distance is
 //the "straight-line" distance between two nodes in a 2D plane:
-    int euclidean_distance(Node start, Node goal) {
+/**
+ *
+ * @param start start node
+ * @param goal end node
+ * @return distance
+ */
+int euclidean_distance(Node start, Node goal) {
 
         //Initializing the variable "dx" and "dy". "dx" is the horizontal distance between the two nodes and
         //"dy" is the vertical distance between the two nodes:
