@@ -32,6 +32,7 @@ int main(void) {
 #ifdef _WIN32
     enable_virtual_terminal_processing();
 #endif
+
     // Store the filepath of the input document in a variable
     const char* filepath = "assets/addresses.csv";
 

@@ -194,7 +194,7 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
     count ++;
 
     if (count > buffer) {
-        int load_percent = round(count / 18500000 * 100);
+        int load_percent = round(count / pow(2,  size) * 100);
         if (load_percent < 100 && load_percent > last_printed + 1) {
             if (load_percent < 10) {
                 for (int i = 0; i < 11; i++) {
