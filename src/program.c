@@ -38,7 +38,7 @@ int main(void) {
 
     // This function generates a random list of addresses
     // The function uses the filepath and an integer representing the amount of nodes wanted
-    generate_addresses(filepath, 20);
+    generate_addresses(filepath, 21);
 
     // Get the size of the array, using "get_delivery_point_count()"
     // This function counts the number of nodes in the file

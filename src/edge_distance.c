@@ -2,6 +2,8 @@
 //Libraries Needed
 #include <math.h>
 #include "edge_distance.h"
+
+#include <limits.h>
 #include <stdlib.h>
 
 //calculate_edges() is the function that fills the distance matrix, which is used by the Branch & Bound
