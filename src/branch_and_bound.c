@@ -14,69 +14,33 @@
 //the Traveling Salesman Problem (TSP) using the Branch and Bound algorithm. The function initialized
 //the needed structures, calculates the initial bound and starts the recursive exploration to find
 //the optimal route (in this case the fastest route, which means the route that has the lowest cost):
+
 void TSP(int size, int matrix[size][size],int* final_result, int final_route[]) {
 
-    //Declaration of visited array, keeping track of the already visited nodes
-    int visited[size];
+    int visited[size]; // Keep track of visited nodes
+    int current_route[size + 1]; // Keep track of the current route
+    int current_bound = 0; // Curren bound initially set to 0.
 
-    //Initializing the "current_route[]" array, which will store the current route of nodes being explored.
-    //It has "size+1" elements, which makes it so it can store a full route, that includes returning to
-    //the starting node, hence the + 1:
-    int current_route[size + 1];
+    memset(current_route, -1, sizeof(current_route)); //Sets all the elements in current_route[] to -1
+    memset(visited, 0, sizeof(visited)); // Set all elements in visited to "0"
 
-    //Initializing "current_bound" variable, which represents an initial lower bound of the travel cost.
-    //This value helps in excluding routes in the Branch & Bound algorithm, by estimating a minimal
-    //possible cost for the current route:
-    int current_bound = 0; //Initially set to 0.
-
-    //Sets all the elements in current_route[] to -1, signifying that no nodes have been visited or
-    //assigned yet in the current_route[] array:
-    memset(current_route, -1, sizeof(current_route));
-
-    //Sets all the elements in visited[] to 0, marking all nodes as unvisited:
-    memset(visited, 0, sizeof(visited));
-
-    //This for-loop iterates over all nodes and calculates "current_bound", based on the formula:
-    //T = 1 / 2 * (sum of "first_minimum" + "second_minimum") for each node's outgoing edges.
+    //This for-loop iterates over all nodes and calculates "current_bound"
     for (int i = 0; i < size; i++) {
 
-        //For each "i", it adds the values returned by "first_minimum(matrix, i)", which is the smallest
-        //outgoing edge cost, and "second_minimum(matrix, i)", which is the second-smallest
-        //outgoing edge cost, to "current_bound". This is to compute a realistic initial estimate
-        //of the minimal route cost, which will help the Branch and Bound algorithm in deciding
-        //which routes to explore further.
+        // Smallest and second-smallest edge weight from each node is added
         current_bound += (first_minimum(size, matrix, i) + second_minimum(size, matrix, i));
-
     }
 
-    //After finding the sum of the edge cost, then "current_bound" is divided by 2 to complete
-    //the bound calculation. If "current_bound" is odd, it gets rounded up by adding 1, which
-    //ensures the bound remains an integer. This integer "current_bound", represents the estimated
-    //minimal route cost, from the starting node, which helps the Branch and Bound algorithm in
-    //deciding which specific routes, that need to be excluded/pruned.
-    current_bound = (current_bound & 1) ? current_bound / 2 + 1 : current_bound / 2;
-    //The "&" symbol in this case is not a logical "AND", but a bitwise "AND". This means that in
-    //this case we say that, "current_bound & 1" performs a "Bitwise AND" between "current_bound" and
-    //"1". The number "1" in binary is "0001", which means when "current_bound & 1" is evaluated:
-    // - If the last bit of "current_bound" is "1", the result is "1", meaning "current_bound" is odd.
-    // - If the last bit of "current_bound" is "0", the result is "0", meaning "current_bound" is even.
-
+    // Calculate current bound
+    current_bound = (current_bound % 2) ? current_bound / 2 + 1 : current_bound / 2;
 
     //The TSP route is initialized to start from node 0:
     visited[0] = 1;         //visited[0] = 1; marks node 0 as visited.
     current_route[0] = 0;   //current_route[0] = 0; places node 0 at the beginning of "current_route[]".
 
     //Run the TSP_Recursion() function to begin recursion exploration:
-
-    //Input parameters are:
-    // - "matrix": The adjacency matrix representing costs between nodes.
-    // - "current_bound": The initial calculated bound.
-    // - "current_weight = 0": This represents the current route's weight (starting from 0,
-    //                         given that no travel has occurred yet).
-    // - "level = 1": This indicates that we are at the first level of the route (only starting node).
-    // - "current_route": The route array with node 0 as the starting node.
-    TSP_Recursion(size, matrix, current_bound, 0, 1, current_route, final_result, visited, final_route);
-
+    TSP_Recursion(size, matrix, current_bound, 0, 1,
+        current_route, final_result, visited, final_route);
 }
 
 
@@ -175,102 +139,40 @@ int second_minimum(int size, int matrix[size][size], int i) {
 
 }
 
-// ********************* (DELETE IF NOT USED) ************************
-double count = 0;
-int buffer = 100000;
-int last_printed;
-int message_print_state = false;
-
-// ***************** (TO HERE) **************************************
 
 //TSP_Recursion() function is the building stone of the recursive Branch and Bound algorithm used to
 //solve the Traveling Salesman Problem (TSP). This function explores potential routes recursively,
 //calculates cost, and excludes routes, that is greater in cost than the current best known
 //solution ("final_result"). It updates the best route and cost as it finds better (faster) solutions:
-void TSP_Recursion(int size, int matrix[size][size], int current_bound, int current_weight, int level, int current_route[], int *final_result, int visited[], int final_route[]) {
-
-    /// Loading sequence for user experience. Temporary ********** (DELETE THIS IF NOT USED) ***********
-    /// // This only works for 20 node list, if the node count is changed 1850000 needs to be changed also
-    count ++;
-
-    if (count > buffer) {
-        int load_percent = (size <= 20) ? round(count / (pow(2, size)) * 100) : round(count / (pow(2, size) * (size * 0.7 * (size - 20))) * 100);
-        if (load_percent < 100 && load_percent > last_printed + 1) {
-            if (load_percent < 10) {
-                for (int i = 0; i < 11; i++) {
-                    printf("\b");
-                }
-            } else {
-                for (int i = 0; i < 12; i++) {
-                    printf("\b");
-                }
-            }
-            printf("Loading:\033[32;1m %d%%\033[0m", (load_percent));
-            last_printed = load_percent;
-            buffer += 100000;
-            fflush(stdout);
-
-        } else if (load_percent >= 100 && !message_print_state) {
-            for (int i = 0; i < 12; i++) {
-                printf("\b");
-            }
-            printf("Loading:\033[32;1m 100%%\033[0m");
-            fflush(stdout);
-
-            printf("\n \n");
-            printf("\033[32;1mCalculations complete! Returning best route: \033[0m\n");
-            message_print_state = true;
-        }
-    }
-
-    /// ***************************** (TO HERE) ****************************
+void TSP_Recursion(int size, int matrix[size][size], int current_bound, int current_weight,
+    int level, int current_route[], int *final_result, int visited[], int final_route[]) {
 
     //When "level == size", it means all nodes have been visited:
     if (level == size) {
 
-        //Checks if there's a route back to the starting node (ensuring the route is a complete cycle).
-        //If "matrix[current_route[level - 1]][current_route[0]]" is not 0 (indicating a route back exist):
+        //Checks if there's a route back to the starting node
         if (matrix[current_route[level - 1]][current_route[0]] != 0) {
 
-            //Initializing the variable "current_result" to the total cost of the current route, by
-            //adding the cost of returning to the starting node.
+            //Initializing the variable "current_result"
             int current_result = current_weight + matrix[current_route[level - 1]][current_route[0]];
 
-            //Check if "current_result" is less than "final_result" (the minimum cost found so far),
-            //it updates "final_result" and saves the route by calling/running copy_To_Final() function:
-           // printf("%d, %d\n", current_result, *final_result);
+            //Check if "current_result" is less than "final_result"
             if (current_result < *final_result) {
                 copy_To_Final(size, current_route, final_route);
                 *final_result = current_result;
             }
-
-
         }
-
-        //After updating "final_result" and "final_route", the "return" statement is executed.
-        //This "return" exits the TSP_Recursion() function and prevents further recursive calls from
-        //being made along this route. This is important, because once all nodes have been visited
-        //and the route cost is calculated, there's no need to continue exploring any further in
-        //this specific branch of recursion:
+        //After updating "final_result" and "final_route"
         return;
-
     }
 
-    //For levels below "size", the function iterates over all nodes (i = 0 to N - 1) to find potential
-    //nodes to visit next:
+    // If all not are not visited
     for (int i = 0; i < size; i++) {
-
-        //It considers node "i" as the next destination if "matrix[current_route[level - 1]][i] is
-        //not 0, meaning there is a route from the current node to node "i" "&&" (AND) if "visited[i]"
-        //is 0, meaning that the node "i" has not been visited
+        // Consider node "i" as the next destination if there is a route, and not visited
         if (matrix[current_route[level - 1]][i] != 0 && visited[i] == 0) {
-
-            //If the statement is true, which means node "i" is chosen as the next destination, then
-            //"temp" temporarily stores "current_bound" for later backtracking.
+            // "temp" stores "current_bound" for later backtracking.
             int temp = current_bound;
-
-            //"current_weight" is updated to include the cost of traveling from the current node to
-            //node "i":
+            // Update current weight
             current_weight += matrix[current_route[level - 1]][i];
 
             //If node "level == 1", it uses the first minimum edge cost from the current and next
@@ -284,41 +186,25 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
             } else {
                 current_bound -= (second_minimum(size, matrix, current_route[level - 1])
                                  + first_minimum(size, matrix, i)) / 2;
-
             }
-            //The previous if-statement adjusts "current_bound" downward, estimating the cost for the
-            //remaining route.
 
             //Checks if the sum of "current_bound" + "current_weight" is less than "final_results".
-            //printf("Current bound: %d, Current weight: %d, Best distance result so far%d\n", current_bound, current_weight, *final_result);
             if (current_bound + current_weight < *final_result) {
-
-                //If true, it will continue exploring this route so:
-
                 // - "current_route[level] = i": records node "i" in the route:
                 current_route[level] = i;
-
                 // - "visited[i] = 1": marks node "i" as visited:
                 visited[i] = 1;
 
                 // - "TSP_Recursion()": Is called recursively to move to the next level:
-                TSP_Recursion(size, matrix, current_bound, current_weight, level + 1, current_route, final_result, visited, final_route);
-
+                TSP_Recursion(size, matrix, current_bound, current_weight, level + 1,
+                    current_route, final_result, visited, final_route);
             }
 
-            //After exploring a route, the function "backtracks" to restore the state before visiting
-            //node "i":
-
-            //"current_weight" is reduced by the cost of traveling to node "i", and "current_bound" is
-            //reset to "temp".
+            // Backtracking one node
             current_weight -= matrix[current_route[level - 1]][i];
             current_bound = temp;
-
-            //In the "visited[]" array, the node just backtracked from is reset to mark only nodes up to the current level as visited,
-            //ensuring each recursive call works with an accurate state.
             visited[i] = 0;
         }
-
     }
 }
 
@@ -333,19 +219,13 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
 
 void copy_To_Final(int size, int current_route[], int final_route[]) {
 
-    //This for-loop copies each node from "current_route[]" to "final_route[]". Iterates through
-    //the first elements in "current_route[]" up to "i < size", which represents nodes visited in the current
-    //route, and copies them into "final_route[]":
+    // Copy current route to final route
     for (int i = 0; i < size; i++) {
         final_route[i] = current_route[i];
-
     }
 
-    //After the for-loop has been terminated it sets "final_route[]" to "current_route[0]". This
-    //completes the route, by returning to the starting node, so "final_route[]" will now represent
-    //a full route cycle:
+    // Returning to the starting node
     final_route[size] = current_route[0];
-
 }
 
 

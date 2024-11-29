@@ -38,24 +38,21 @@ int get_node_count(const char *filename) {
 void load_nodes_from_file(const char *inputfile, Node nodes_array[], int node_count) {
     // Using the implemented FILE struct from C to create a pointer to a files location
     FILE* fp = fopen(inputfile, "r");
-
     // If the file is not found, print an error to the user, and return.
     if (!fp) {
         printf("Error: Filepath not found\n");
         printf("filename %s", inputfile);
         return;
     }
-
     // Setting a buffer to read each line onto, the buffer is set to hold 100 characters
-    char buffer[100];
 
+    char buffer[50];
     // Skipping the firs line
-    fgets(buffer, 100, fp); // Read and discard the first line
-
+    fgets(buffer, 50, fp); // Read and discard the first line
     // Iterating over each line, from the second line, and reads each coordinate pair into the nodes_array.
     for (int i = 0; i < node_count; i++) {
 
-        fgets(buffer, 15, fp); // Reads a line into the butter
+        fgets(buffer, 50, fp); // Reads a line into the butter
 
         sscanf(buffer, "%d,%d", &nodes_array[i].x, &nodes_array[i].y); // Scans the values of that line, into a node
 

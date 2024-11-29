@@ -37,8 +37,9 @@ int main(void) {
     const char* filepath = "assets/addresses.csv";
 
     // This function generates a random list of addresses
-    // The function uses the filepath and an integer representing the amount of nodes wanted
-    generate_addresses(filepath, 21);
+    // The function uses the filepath and an integer representing the amount of nodes wanted and the max value of each coordinate
+    int max_size = 200;
+    generate_addresses(filepath, 20, max_size);
 
     // Get the size of the array, using "get_delivery_point_count()"
     // This function counts the number of nodes in the file
@@ -79,7 +80,8 @@ int main(void) {
     // that begins and ends in the starting node:
     printf("Path Taken: ");
     for (int i = 0; i <= node_count; i++) {
-        printf("%d ", final_route[i]);
+
+            printf("%d ", final_route[i]);
     }
 
     //Stops the program successfully:
