@@ -17,6 +17,8 @@ add_executable(program program.c
         load_nodes_from_file.c
         address_generator.c
         address_generator.h
+        timer.c
+        timer.h
 )
 
 #We link our library to the game executable, so the executable can access the functions in the library.

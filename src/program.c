@@ -9,6 +9,7 @@
 #include <time.h>
 
 #include "address_generator.h"
+#include "timer.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -24,19 +25,10 @@ void enable_virtual_terminal_processing() {
 }
 #endif
 
-//Function that prints the execution time of the program ones finished
-void print_execution_time(clock_t start_time) {
-    clock_t end_time = clock();
-    double execution_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
-    printf("Execution time: %.3f seconds\n", execution_time);
-}
-
 //main() function initializes the problem's data and calls the TSP() function to solve the Traveling
 //Salesman Problem (TSP). Once the TSP() function finds the optimal route, main() function prints
 //the minimum cost and the optimal route:
 int main(void) {
-
-    clock_t start = clock();
 
 #ifdef _WIN32
     enable_virtual_terminal_processing();
@@ -76,6 +68,7 @@ int main(void) {
     // node exactly once and returns to the starting node, minimizing the travel cost.
     // During this process, the function updates "final_result" through a pointer with the minimum cost,
     // and "final_route" with the sequence of nodes in that optimal route.
+    clock_t start = clock(); // start the timer
     TSP(node_count, matrix, &final_result, final_route);
 
     // After the TSP() function completes, main() function outputs the minimum cost and the optimal route:

@@ -284,6 +284,30 @@ program.c.s:
 	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/program.c.s
 .PHONY : program.c.s
 
+timer.o: timer.c.o
+.PHONY : timer.o
+
+# target to build an object file
+timer.c.o:
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/timer.c.o
+.PHONY : timer.c.o
+
+timer.i: timer.c.i
+.PHONY : timer.i
+
+# target to preprocess a source file
+timer.c.i:
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/timer.c.i
+.PHONY : timer.c.i
+
+timer.s: timer.c.s
+.PHONY : timer.s
+
+# target to generate assembly for a file
+timer.c.s:
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/program.dir/build.make src/CMakeFiles/program.dir/timer.c.s
+.PHONY : timer.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -310,6 +334,9 @@ help:
 	@echo "... program.o"
 	@echo "... program.i"
 	@echo "... program.s"
+	@echo "... timer.o"
+	@echo "... timer.i"
+	@echo "... timer.s"
 .PHONY : help
 
 

@@ -105,4 +105,5 @@ src/CMakeFiles/program.dir/program.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/sys/_types/_clock_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/sys/_types/_time_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/sys/_types/_timespec.h \
-  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/address_generator.h
+  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/address_generator.h \
+  /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/timer.h
