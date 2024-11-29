@@ -73,43 +73,43 @@ src/CMakeFiles/program.dir/program.c.o: src/CMakeFiles/program.dir/flags.make
 src/CMakeFiles/program.dir/program.c.o: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/program.c
 src/CMakeFiles/program.dir/program.c.o: src/CMakeFiles/program.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/program.dir/program.c.o"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/program.c.o -MF CMakeFiles/program.dir/program.c.o.d -o CMakeFiles/program.dir/program.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/program.c
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/program.c.o -MF CMakeFiles/program.dir/program.c.o.d -o CMakeFiles/program.dir/program.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/program.c
 
 src/CMakeFiles/program.dir/program.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/program.dir/program.c.i"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/program.c > CMakeFiles/program.dir/program.c.i
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/program.c > CMakeFiles/program.dir/program.c.i
 
 src/CMakeFiles/program.dir/program.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/program.dir/program.c.s"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/program.c -o CMakeFiles/program.dir/program.c.s
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/program.c -o CMakeFiles/program.dir/program.c.s
 
 src/CMakeFiles/program.dir/load_nodes_from_file.c.o: src/CMakeFiles/program.dir/flags.make
 src/CMakeFiles/program.dir/load_nodes_from_file.c.o: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
 src/CMakeFiles/program.dir/load_nodes_from_file.c.o: src/CMakeFiles/program.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/program.dir/load_nodes_from_file.c.o"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/load_nodes_from_file.c.o -MF CMakeFiles/program.dir/load_nodes_from_file.c.o.d -o CMakeFiles/program.dir/load_nodes_from_file.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/load_nodes_from_file.c.o -MF CMakeFiles/program.dir/load_nodes_from_file.c.o.d -o CMakeFiles/program.dir/load_nodes_from_file.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
 
 src/CMakeFiles/program.dir/load_nodes_from_file.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/program.dir/load_nodes_from_file.c.i"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c > CMakeFiles/program.dir/load_nodes_from_file.c.i
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c > CMakeFiles/program.dir/load_nodes_from_file.c.i
 
 src/CMakeFiles/program.dir/load_nodes_from_file.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/program.dir/load_nodes_from_file.c.s"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c -o CMakeFiles/program.dir/load_nodes_from_file.c.s
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c -o CMakeFiles/program.dir/load_nodes_from_file.c.s
 
 src/CMakeFiles/program.dir/address_generator.c.o: src/CMakeFiles/program.dir/flags.make
 src/CMakeFiles/program.dir/address_generator.c.o: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/address_generator.c
 src/CMakeFiles/program.dir/address_generator.c.o: src/CMakeFiles/program.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/program.dir/address_generator.c.o"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/address_generator.c.o -MF CMakeFiles/program.dir/address_generator.c.o.d -o CMakeFiles/program.dir/address_generator.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/address_generator.c
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/address_generator.c.o -MF CMakeFiles/program.dir/address_generator.c.o.d -o CMakeFiles/program.dir/address_generator.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/address_generator.c
 
 src/CMakeFiles/program.dir/address_generator.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/program.dir/address_generator.c.i"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/address_generator.c > CMakeFiles/program.dir/address_generator.c.i
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/address_generator.c > CMakeFiles/program.dir/address_generator.c.i
 
 src/CMakeFiles/program.dir/address_generator.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/program.dir/address_generator.c.s"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/address_generator.c -o CMakeFiles/program.dir/address_generator.c.s
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/address_generator.c -o CMakeFiles/program.dir/address_generator.c.s
 
 # Object files for target program
 program_OBJECTS = \

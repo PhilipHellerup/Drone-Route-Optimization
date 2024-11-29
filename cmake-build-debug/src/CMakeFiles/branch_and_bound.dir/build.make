@@ -73,29 +73,29 @@ src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o: src/CMakeFiles/branch_
 src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.c
 src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o: src/CMakeFiles/branch_and_bound.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o -MF CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o.d -o CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.c
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o -MF CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o.d -o CMakeFiles/branch_and_bound.dir/branch_and_bound.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.c
 
 src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/branch_and_bound.dir/branch_and_bound.c.i"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.c > CMakeFiles/branch_and_bound.dir/branch_and_bound.c.i
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.c > CMakeFiles/branch_and_bound.dir/branch_and_bound.c.i
 
 src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.c -o CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/branch_and_bound.c -o CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s
 
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o: src/CMakeFiles/branch_and_bound.dir/flags.make
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o: src/CMakeFiles/branch_and_bound.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o -MF CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o.d -o CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o -MF CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o.d -o CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
 
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c > CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c > CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i
 
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c -o CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c -o CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s
 
 # Object files for target branch_and_bound
 branch_and_bound_OBJECTS = \

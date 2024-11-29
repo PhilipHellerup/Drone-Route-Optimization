@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "src/libbranch_and_bound.a"
+			"path" : "src/libedge_distance.a"
 		}
 	],
 	"backtrace" : 1,
@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 3,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 12,
+				"line" : 11,
 				"parent" : 0
 			}
 		]
@@ -43,7 +43,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics"
+					"fragment" : "-g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -fcolor-diagnostics"
 				}
 			],
 			"includes" : 
@@ -69,9 +69,9 @@
 			]
 		}
 	],
-	"id" : "branch_and_bound::@145eef247bfb46b6828c",
-	"name" : "branch_and_bound",
-	"nameOnDisk" : "libbranch_and_bound.a",
+	"id" : "edge_distance::@145eef247bfb46b6828c",
+	"name" : "edge_distance",
+	"nameOnDisk" : "libedge_distance.a",
 	"paths" : 
 	{
 		"build" : "src",
@@ -100,7 +100,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/branch_and_bound.c",
+			"path" : "src/edge_distance.c",
 			"sourceGroupIndex" : 0
 		},
 		{

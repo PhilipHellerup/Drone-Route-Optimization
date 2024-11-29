@@ -1,4 +1,3 @@
-
 //Libraries Needed:
 #include <limits.h>
 #include <stdio.h>
@@ -7,6 +6,7 @@
 #include "edge_distance.h"
 #include "branch_and_bound.h"
 #include <load_nodes_from_file.h>
+#include <time.h>
 
 #include "address_generator.h"
 
@@ -24,10 +24,19 @@ void enable_virtual_terminal_processing() {
 }
 #endif
 
+//Function that prints the execution time of the program ones finished
+void print_execution_time(clock_t start_time) {
+    clock_t end_time = clock();
+    double execution_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
+    printf("Execution time: %.3f seconds\n", execution_time);
+}
+
 //main() function initializes the problem's data and calls the TSP() function to solve the Traveling
 //Salesman Problem (TSP). Once the TSP() function finds the optimal route, main() function prints
 //the minimum cost and the optimal route:
 int main(void) {
+
+    clock_t start = clock();
 
 #ifdef _WIN32
     enable_virtual_terminal_processing();
@@ -72,6 +81,7 @@ int main(void) {
     // After the TSP() function completes, main() function outputs the minimum cost and the optimal route:
 
     // Prints the lowest travel cost found.
+
     printf("Minimum cost: %d\n", final_result);
 
     // Prints the sequence of nodes in the optimal route:
@@ -81,6 +91,10 @@ int main(void) {
     for (int i = 0; i <= node_count; i++) {
         printf("%d ", final_route[i]);
     }
+
+    // Print time it takes to run the program
+    printf("\n");
+    print_execution_time(start);
 
     //Stops the program successfully:
     return EXIT_SUCCESS;

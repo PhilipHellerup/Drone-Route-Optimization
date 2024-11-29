@@ -73,29 +73,29 @@ src/CMakeFiles/edge_distance.dir/edge_distance.c.o: src/CMakeFiles/edge_distance
 src/CMakeFiles/edge_distance.dir/edge_distance.c.o: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.c
 src/CMakeFiles/edge_distance.dir/edge_distance.c.o: src/CMakeFiles/edge_distance.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/edge_distance.dir/edge_distance.c.o"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/edge_distance.dir/edge_distance.c.o -MF CMakeFiles/edge_distance.dir/edge_distance.c.o.d -o CMakeFiles/edge_distance.dir/edge_distance.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.c
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/edge_distance.dir/edge_distance.c.o -MF CMakeFiles/edge_distance.dir/edge_distance.c.o.d -o CMakeFiles/edge_distance.dir/edge_distance.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.c
 
 src/CMakeFiles/edge_distance.dir/edge_distance.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edge_distance.dir/edge_distance.c.i"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.c > CMakeFiles/edge_distance.dir/edge_distance.c.i
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.c > CMakeFiles/edge_distance.dir/edge_distance.c.i
 
 src/CMakeFiles/edge_distance.dir/edge_distance.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edge_distance.dir/edge_distance.c.s"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.c -o CMakeFiles/edge_distance.dir/edge_distance.c.s
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/edge_distance.c -o CMakeFiles/edge_distance.dir/edge_distance.c.s
 
 src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o: src/CMakeFiles/edge_distance.dir/flags.make
 src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o: /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
 src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o: src/CMakeFiles/edge_distance.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o -MF CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o.d -o CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o -MF CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o.d -o CMakeFiles/edge_distance.dir/load_nodes_from_file.c.o -c /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c
 
 src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/edge_distance.dir/load_nodes_from_file.c.i"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c > CMakeFiles/edge_distance.dir/load_nodes_from_file.c.i
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c > CMakeFiles/edge_distance.dir/load_nodes_from_file.c.i
 
 src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/edge_distance.dir/load_nodes_from_file.c.s"
-	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c -o CMakeFiles/edge_distance.dir/load_nodes_from_file.c.s
+	cd /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/cmake-build-debug/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacoblarsen/Documents/GitHub/P1-Project-Program-In-C/src/load_nodes_from_file.c -o CMakeFiles/edge_distance.dir/load_nodes_from_file.c.s
 
 # Object files for target edge_distance
 edge_distance_OBJECTS = \
