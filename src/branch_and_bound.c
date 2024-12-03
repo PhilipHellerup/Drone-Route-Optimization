@@ -55,29 +55,17 @@ void TSP(int size, int matrix[size][size],int* final_result, int final_route[]) 
 //i = The index of the node for which we want to find the minimum outgoing edge cost.
 
 int first_minimum(int size, int matrix[size][size], int i) {
-
-    //Initializing the "first" variable to INT_MAX, which is the highest possible integer value. This
-    //is to ensure that any smaller value encountered in the loop will replace "first".
     int first = INT_MAX;
 
-    //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
-    //node i to each node j:
+    // Check travel cost to all nodes
     for (int j = 0; j < size; j++) {
 
-        //Checks if "i != j" to exclude self-loops (given that the cost to go from node A to itself is
-        //not relevant for this program). It also checks if "matrix[i][j] < first", which means
-        //if the cost to go from node i to node j (matrix[i][j]) is less than the current "first",
-        //then it updates "first" with the smallest cost.
+        // Find the node with the shortest distance, which is not to itself
         if (matrix[i][j] < first && i != j) {
             first = matrix[i][j];
         }
-
     }
-
-    //Return the integer variable "first", which represents the minimum cost from
-    //node i to any other node j (excluding itself of course):
-    return first;
-
+    return first; // Return lowest cost
 }
 
 
@@ -92,51 +80,26 @@ int first_minimum(int size, int matrix[size][size], int i) {
 //i = The index of the node for which we want to find the second minimum outgoing edge cost.
 
 int second_minimum(int size, int matrix[size][size], int i) {
-
-    //Initializing the "first" and "second" variable to INT_MAX, which is the highest possible integer
-    //value. "first" will store the smallest outgoing edge cost, and "second" will store the
-    //second smallest. INT_MAX is to ensure that any smaller value encountered in the loop will
-    //replace "first" or "second", depending on the scenario:
     int first = INT_MAX;
     int second = INT_MAX;
 
-    //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
-    //node i to each node j:
+    // Check travel cost to all nodes
     for (int j = 0; j < size; j++) {
-
-        //Checks if "i == j", which means that if its true it will skip the current iteration of
-        //the for-loop and go to "j+1" iteration. We do this, because we don't want the cost of going
-        //from a node to itself:
         if (i == j) {
-            continue; //Skip the current iteration of the for-loop.
-
+            continue; // Skip checking for the node to itself
         }
 
         //Checks if the cost "matrix[i][j]" is smaller or equal to "first" (current smallest edge cost):
         if (matrix[i][j] <= first) {
+            second = first; // Previous smallest to second
+            first = matrix[i][j]; // Update first
 
-            //"second" is set to the current value of "first" (shifting the previous smallest cost
-            //to "second"):
-            second = first;
-
-            //"first" is updated to "matrix[i][j]", the newest smallest edge cost.
-            first = matrix[i][j]; //Sets the "first" cost to the cost of the current matrix[i][j] iteration.
-
-        //Else if "matrix[i][j]" is smaller than "second", but not equal to "first", then "second" is
-        //updated to matrix[i][j].
+        //Else if "matrix[i][j]" is smaller than "second", but not smallet for equal for first
         } else if (matrix[i][j] <= second && matrix[i][j] != first) {
-
-            //"second" is updated to "matrix[i][j]":
-            second = matrix[i][j];
-
+            second = matrix[i][j]; // Update seconcd
         }
-
     }
-
-    //Return the integer variable "second", which represents the second-smallest cost from
-    //node i to any other node j (excluding itself of course):
-    return second;
-
+    return second; // Return second lowest cost
 }
 
 
