@@ -7,6 +7,6 @@
 #define ADDRESS_GENERATOR_H
 
 
-void generate_addresses(const char *filepath, int n);
+void generate_addresses(const char *filepath, int n, int size);
 
 #endif //ADDRESS_GENERATOR_H

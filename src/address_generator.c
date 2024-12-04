@@ -6,7 +6,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-void generate_addresses(const char *filepath, int n) {
+void generate_addresses(const char *filepath, int n, int size) {
 
     FILE* filepointer = fopen(filepath, "w");
 
@@ -24,11 +24,11 @@ void generate_addresses(const char *filepath, int n) {
     // Generates the correct number of random coordinates
     for (int i = 0; i < n; i++) {
         // Generates random integer from 0 -> N + 1 (N + 1 can be any chosen value)
-        int x = rand() % n+1;
-        int y = rand() % n+1;
+        double x = rand() % size+1;
+        double y = rand() % size+1;
 
         // Prints coordinates to the file
-        fprintf(filepointer, "%i,%i \n", x,y);
+        fprintf(filepointer, "%lf,%lf \n", x,y);
     }
 
     fclose(filepointer);
