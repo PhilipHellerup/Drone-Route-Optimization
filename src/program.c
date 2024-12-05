@@ -2,11 +2,10 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "edge_distance.h"
 #include "branch_and_bound.h"
 #include <load_nodes_from_file.h>
-#include <time.h>
+#include <tgmath.h>
 
 #include "address_generator.h"
 #include "timer.h"
@@ -42,11 +41,34 @@ int main(void) {
 
     // This function generates a random list of addresses
     // The function uses the filepath and an integer representing the amount of nodes wanted
-    generate_addresses(filepath, 10, 200);
+    generate_addresses_float(filepath, 20, 400);
 
     // Get the size of the array, using "get_delivery_point_count()"
     // This function counts the number of nodes in the file
     const int node_count = get_node_count(filepath);
+    if (node_count < 0) {
+        printf("Error loading nodes");
+        exit(EXIT_FAILURE);
+    }
+
+    // If number of nodes is below or equal to two, print a default statement
+    if (node_count <= 2) {
+        switch (node_count) {
+            case 0: {
+                printf("Error: Input file has no nodes \n");
+                exit(EXIT_SUCCESS); // Exit the program
+            }
+            case 1: {
+                printf("Error: Input only has one node \n");
+                exit(EXIT_SUCCESS);
+            }
+            case 2: {
+                printf("Error: Graph only has two nodes. \n");
+                exit(EXIT_SUCCESS); // Exit the program
+            }
+            default: printf("Unexpected error: node_count is %d which is invalid", node_count);
+        }
+    }
 
     Node nodes_array[node_count];
 
@@ -77,7 +99,6 @@ int main(void) {
     // After the TSP() function completes, main() function outputs the minimum cost and the optimal route:
 
     // Prints the lowest travel cost found.
-
     printf("Minimum cost: %d\n", final_result);
 
     // Prints the sequence of nodes in the optimal route:

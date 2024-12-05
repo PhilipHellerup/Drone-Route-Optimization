@@ -47,8 +47,17 @@ void TSP(int size, int matrix[size][size],int* final_result, int final_route[]) 
         //outgoing edge cost, to "current_bound". This is to compute a realistic initial estimate
         //of the minimal route cost, which will help the Branch and Bound algorithm in deciding
         //which routes to explore further.
-        current_bound += (first_minimum(size, matrix, i) + second_minimum(size, matrix, i));
 
+        // Calculate if edge weight are too high
+        /*double temp_bound = (double)current_bound+
+        (double)first_minimum(size, matrix, i)+
+        (double)second_minimum(size, matrix, i);
+        if (temp_bound > INT32_MAX) {
+            printf("Error: Edge weights are too high");
+            exit(EXIT_FAILURE); // Exit the program
+        }*/
+
+        current_bound += (first_minimum(size, matrix, i) + second_minimum(size, matrix, i));
     }
 
     //After finding the sum of the edge cost, then "current_bound" is divided by 2 to complete
@@ -101,6 +110,7 @@ int first_minimum(int size, int matrix[size][size], int i) {
     //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
     //node i to each node j:
     for (int j = 0; j < size; j++) {
+        int value = matrix[i][j];
 
         //Checks if "i != j" to exclude self-loops (given that the cost to go from node A to itself is
         //not relevant for this program). It also checks if "matrix[i][j] < first", which means
@@ -189,6 +199,12 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
         //Checks if there's a route back to the starting node (ensuring the route is a complete cycle).
         //If "matrix[current_route[level - 1]][current_route[0]]" is not 0 (indicating a route back exist):
         if (matrix[current_route[level - 1]][current_route[0]] != 0) {
+
+            double temp_result = (double)current_weight + (double)matrix[current_route[level - 1]][current_route[0]];
+            if (temp_result > INT32_MAX) {
+                printf("Error: Edge weights are too high");
+                exit(EXIT_FAILURE);
+            }
 
             //Initializing the variable "current_result" to the total cost of the current route, by
             //adding the cost of returning to the starting node.

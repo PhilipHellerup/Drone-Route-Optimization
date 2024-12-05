@@ -2,6 +2,9 @@
 //Libraries Needed
 #include <math.h>
 #include "edge_distance.h"
+
+#include <limits.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 //calculate_edges() is the function that fills the distance matrix, which is used by the Branch & Bound
@@ -43,11 +46,11 @@ void calculate_edges(const int node_count, int matrix[node_count][node_count], N
  */
 int euclidean_distance(const Node start, const Node goal) {
         // Using abs() to calculate the absolute difference between 'x' and 'y' coordinates.
-        int dx = abs(goal.x - start.x);
-        int dy = abs(goal.y - start.y);
+    double dx = (double)goal.x - (double)start.x;
+    double dy = (double)goal.y - (double)start.y;
 
         // Returning the distance between the two nodes.
-        return (int)(sqrt(dx*dx + dy*dy) + 0.5); // Adding 0,5 before casting to an int, to round to nearest integer
+            return (int)sqrt(dx * dx + dy * dy) + 0.5; // Adding 0,5 before casting to an int, to round to nearest integer
 }
 //Finding the Euclidean distance between the "start" and "goal" node:
 
