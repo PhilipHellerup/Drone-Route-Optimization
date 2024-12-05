@@ -4,6 +4,9 @@
 
 #include "load_nodes_from_file.h"
 #include <stdio.h>
+#include <tgmath.h>
+
+#include "../../../../../../Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/stdlib.h"
 
 // This functions takes in the filepath to the input file as its only parameter.
 // Each newline symbol ("\n") is counted, to return the number of nodes in the file
@@ -54,11 +57,25 @@ void load_nodes_from_file(const char *inputfile, Node nodes_array[], int node_co
 
     // Iterating over each line, from the second line, and reads each coordinate pair into the nodes_array.
     for (int i = 0; i < node_count; i++) {
+        double x_value = 0.0, y_value = 0.0;
 
-        fgets(buffer, 15, fp); // Reads a line into the butter
+        // Read a line from the file
+        if (!fgets(buffer, sizeof(buffer), fp)) {
+            fprintf(stderr, "Error: Failed to read line %d from input file\n", i + 1);
+            exit(EXIT_FAILURE);
+        }
 
-        sscanf(buffer, "%d,%d", &nodes_array[i].x, &nodes_array[i].y); // Scans the values of that line, into a node
+        // Scan the coordinates from a line
+        if (sscanf(buffer, "%lf,%lf", &x_value, &y_value) != 2) {
+            fprintf(stderr, "Error: Line %d is not formatted correctly: %s(should be x_value,y_value)", i + 1, buffer);
+            exit(EXIT_FAILURE);
+        }
 
-        printf("Node %d: (%d,%d)\n",i, nodes_array[i].x, nodes_array[i].y); // Prints the node to the user
+        // Round and assign the values to each node
+        nodes_array[i].x = (int)round(x_value);
+        nodes_array[i].y = (int)round(y_value);
+
+        // Print the node details
+        printf("Node %d: (%d,%d)\n", i, nodes_array[i].x, nodes_array[i].y);
     }
 }

@@ -8,5 +8,6 @@
 
 
 void generate_addresses(const char *filepath, int n, int size);
+void generate_addresses_float(const char* filepath, int n, int size);
 
 #endif //ADDRESS_GENERATOR_H
