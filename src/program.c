@@ -1,12 +1,10 @@
 //Libraries Needed:
-#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "edge_distance.h"
 #include "branch_and_bound.h"
 #include <load_nodes_from_file.h>
 #include <tgmath.h>
-
 #include "address_generator.h"
 #include "timer.h"
 
@@ -63,7 +61,7 @@ int main(void) {
                 printf("Error: Graph only has two nodes. \n");
                 exit(EXIT_SUCCESS); // Exit the program
             }
-            default: printf("Unexpected error: node_count is %lf which is invalid", node_count);
+            default: printf("Unexpected error: node_count is %d which is invalid", node_count);
         }
     }
 
@@ -81,8 +79,8 @@ int main(void) {
     calculate_edges(node_count, matrix, nodes_array);
 
     // Define variables for final_result, the distance covered, and final_route, an array representing the best route
-    // Final_result is set to maximum integer value, and the size of final_route is set to node_count.
-    double final_result = INT_MAX;
+    // Final_result is set to maximum float value, and the size of final_route is set to node_count.
+    double final_result = MAXFLOAT;
     int final_route[node_count];
 
     // Running the TSP() function, with the "matrix[][]" array as an input parameter:
@@ -90,23 +88,22 @@ int main(void) {
     // node exactly once and returns to the starting node, minimizing the travel cost.
     // During this process, the function updates "final_result" through a pointer with the minimum cost,
     // and "final_route" with the sequence of nodes in that optimal route.
+
     clock_t start = clock(); // start the timer
     TSP(node_count, matrix, &final_result, final_route);
 
     // After the TSP() function completes, main() function outputs the minimum cost and the optimal route:
 
-    // Prints the lowest travel cost found.
-    printf("Minimum cost: %lf\n", final_result);
+    // Output:
+    printf("Minimum cost: %lf\n", final_result); // Prints the lowest travel cost found.
 
-    // Prints the sequence of nodes in the optimal route:
-    // This for-loop iterates through the route, showing a complete route cycle,
-    // that begins and ends in the starting node:
+    // Print the minimum path
     printf("Path Taken: ");
     for (int i = 0; i <= node_count; i++) {
         printf("%d ", final_route[i]);
     }
 
-    // Print time it takes to run the program
+    // Print the time it took to calculate
     printf("\n");
     print_execution_time(start);
 

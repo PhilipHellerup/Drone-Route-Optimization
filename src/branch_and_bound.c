@@ -18,164 +18,23 @@ void TSP(int size, double matrix[size][size], double* final_result, int final_ro
     printf("\033[32;1mLoading ... \033[0m \n");
     fflush(stdout);
 
-    //Declaration of visited array, keeping track of the already visited nodes
-    int visited[size];
+    int visited[size]; // Keeps track of visited nodes
+    int current_route[size + 1]; // size + 1 to have space for appending the starting node to end
+    double upper_bound = 0; //Initially set current_bound to 0.
 
-    //Initializing the "current_route[]" array, which will store the current route of nodes being explored.
-    //It has "size+1" elements, which makes it so it can store a full route, that includes returning to
-    //the starting node, hence the + 1:
-    int current_route[size + 1];
-
-    //Initializing "current_bound" variable, which represents an initial lower bound of the travel cost.
-    //This value helps in excluding routes in the Branch & Bound algorithm, by estimating a minimal
-    //possible cost for the current route:
-    double current_bound = 0; //Initially set to 0.
-
-    //Sets all the elements in current_route[] to -1, signifying that no nodes have been visited or
-    //assigned yet in the current_route[] array:
-    memset(current_route, -1, sizeof(current_route));
-
-    //Sets all the elements in visited[] to 0, marking all nodes as unvisited:
-    memset(visited, 0, sizeof(visited));
-
-    //This for-loop iterates over all nodes and calculates "current_bound", based on the formula:
-    //T = 1 / 2 * (sum of "first_minimum" + "second_minimum") for each node's outgoing edges.
-    for (int i = 0; i < size; i++) {
-
-        //For each "i", it adds the values returned by "first_minimum(matrix, i)", which is the smallest
-        //outgoing edge cost, and "second_minimum(matrix, i)", which is the second-smallest
-        //outgoing edge cost, to "current_bound". This is to compute a realistic initial estimate
-        //of the minimal route cost, which will help the Branch and Bound algorithm in deciding
-        //which routes to explore further.
-
-        // Calculate if edge weight are too high
-        /*double temp_bound = (double)current_bound+
-        (double)first_minimum(size, matrix, i)+
-        (double)second_minimum(size, matrix, i);
-        if (temp_bound > INT32_MAX) {
-            printf("Error: Edge weights are too high");
-            exit(EXIT_FAILURE); // Exit the program
-        }*/
-
-        current_bound += (first_minimum(size, matrix, i) + second_minimum(size, matrix, i));
-    }
-
-    //After finding the sum of the edge cost, then "current_bound" is divided by 2 to complete
-    //the bound calculation.
-    current_bound /= 2;
-
+    memset(current_route, -1, sizeof(current_route)); // -1 indicates a blanc space in the array
+    memset(visited, 0, sizeof(visited)); // 0 = "not visited", 1 = "visited"
 
     //The TSP route is initialized to start from node 0:
     visited[0] = 1;         //visited[0] = 1; marks node 0 as visited.
     current_route[0] = 0;   //current_route[0] = 0; places node 0 at the beginning of "current_route[]".
 
+    // Use calculate upper bound function
+    upper_bound = calculate_upper_bound(size, matrix, visited, 0);
+
     //Run the TSP_Recursion() function to begin recursion exploration:
-
-    //Input parameters are:
-    // - "matrix": The adjacency matrix representing costs between nodes.
-    // - "current_bound": The initial calculated bound.
-    // - "current_weight = 0": This represents the current route's weight (starting from 0,
-    //                         given that no travel has occurred yet).
-    // - "level = 1": This indicates that we are at the first level of the route (only starting node).
-    // - "current_route": The route array with node 0 as the starting node.
-    TSP_Recursion(size, matrix, current_bound, 0, 1, current_route, final_result, visited, final_route);
-
-}
-
-
-//first_minimum() function finds the minimum edge (smallest cost) from a given node to any other node.
-//This function helps in calculating a lower bound in the Branch and Bound approach to
-//the Traveling Salesman Problem (TSP), which is used to determine if certain routes should be
-//explored further or excluded/pruned:
-
-//Input parameters:
-//matrix[][] = The adjacency matrix of the graph, where matrix[i][j] represent the cost of going
-//from node i to node j.
-//i = The index of the node for which we want to find the minimum outgoing edge cost.
-
-int first_minimum(int size, double matrix[size][size], int i) {
-
-    //Initializing the "first" variable to INT_MAX, which is the highest possible integer value. This
-    //is to ensure that any smaller value encountered in the loop will replace "first".
-    int first = INT_MAX;
-
-    //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
-    //node i to each node j:
-    for (int j = 0; j < size; j++) {
-        double value = matrix[i][j];
-
-        //Checks if "i != j" to exclude self-loops (given that the cost to go from node A to itself is
-        //not relevant for this program). It also checks if "matrix[i][j] < first", which means
-        //if the cost to go from node i to node j (matrix[i][j]) is less than the current "first",
-        //then it updates "first" with the smallest cost.
-        if (matrix[i][j] < first && i != j) {
-            first = matrix[i][j];
-        }
-
-    }
-
-    //Return the integer variable "first", which represents the minimum cost from
-    //node i to any other node j (excluding itself of course):
-    return first;
-
-}
-
-
-//second_minimum() function finds the second-smallest edge (cost) from a given node to any other node.
-//This function is useful in calculating a tighter bound in the Branch and Bound approach for
-//the Traveling Salesman (TSP) by providing additional information about the second-lowest cost edge,
-//which helps to better estimate the minimum cost for a route.
-
-//Input parameters:
-//matrix[][] = The adjacency matrix of the graph, where matrix[i][j] represent the cost of going
-//from node i to node j.
-//i = The index of the node for which we want to find the second minimum outgoing edge cost.
-
-int second_minimum(int size, double matrix[size][size], int i) {
-
-    //Initializing the "first" and "second" variable to INT_MAX, which is the highest possible integer
-    //value. "first" will store the smallest outgoing edge cost, and "second" will store the
-    //second smallest. INT_MAX is to ensure that any smaller value encountered in the loop will
-    //replace "first" or "second", depending on the scenario:
-    double first = INT_MAX;
-    double second = INT_MAX;
-
-    //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
-    //node i to each node j:
-    for (int j = 0; j < size; j++) {
-
-        //Checks if "i == j", which means that if its true it will skip the current iteration of
-        //the for-loop and go to "j+1" iteration. We do this, because we don't want the cost of going
-        //from a node to itself:
-        if (i == j) {
-            continue; //Skip the current iteration of the for-loop.
-
-        }
-
-        //Checks if the cost "matrix[i][j]" is smaller or equal to "first" (current smallest edge cost):
-        if (matrix[i][j] <= first) {
-
-            //"second" is set to the current value of "first" (shifting the previous smallest cost
-            //to "second"):
-            second = first;
-
-            //"first" is updated to "matrix[i][j]", the newest smallest edge cost.
-            first = matrix[i][j]; //Sets the "first" cost to the cost of the current matrix[i][j] iteration.
-
-        //Else if "matrix[i][j]" is smaller than "second", but not equal to "first", then "second" is
-        //updated to matrix[i][j].
-        } else if (matrix[i][j] <= second && matrix[i][j] != first) {
-
-            //"second" is updated to "matrix[i][j]":
-            second = matrix[i][j];
-
-        }
-
-    }
-
-    //Return the integer variable "second", which represents the second-smallest cost from
-    //node i to any other node j (excluding itself of course):
-    return second;
+    TSP_Recursion(size, matrix, upper_bound, 0, 1,
+        current_route, final_result, visited, final_route);
 
 }
 
@@ -184,106 +43,100 @@ int second_minimum(int size, double matrix[size][size], int i) {
 //solve the Traveling Salesman Problem (TSP). This function explores potential routes recursively,
 //calculates cost, and excludes routes, that is greater in cost than the current best known
 //solution ("final_result"). It updates the best route and cost as it finds better (faster) solutions:
-void TSP_Recursion(int size, double matrix[size][size], double current_bound, double current_weight, int level, int current_route[], double *final_result, int visited[], int final_route[]) {
-    //When "level == size", it means all nodes have been visited:
-    if (level == size) {
 
-        //Checks if there's a route back to the starting node (ensuring the route is a complete cycle).
-        //If "matrix[current_route[level - 1]][current_route[0]]" is not 0 (indicating a route back exist):
-        if (matrix[current_route[level - 1]][current_route[0]] != 0) {
+void TSP_Recursion(int size, double matrix[size][size], double upper_bound, double current_weight,
+    int level, int current_route[], double *final_result, int visited[], int final_route[]) {
+    if (level == size) { // Check is all nodes have been visited
 
-            double temp_result = (double)current_weight + (double)matrix[current_route[level - 1]][current_route[0]];
-            if (temp_result > INT32_MAX) {
-                printf("Error: Edge weights are too high");
-                exit(EXIT_FAILURE);
-            }
+            //Initializing the variable "current_result"
+            double current_result = current_weight + matrix[current_route[level - 1]][current_route[0]];
 
-            //Initializing the variable "current_result" to the total cost of the current route, by
-            //adding the cost of returning to the starting node.
-            int current_result = current_weight + matrix[current_route[level - 1]][current_route[0]];
-
-            //Check if "current_result" is less than "final_result" (the minimum cost found so far),
-            //it updates "final_result" and saves the route by calling/running copy_To_Final() function:
-           // printf("%d, %d\n", current_result, *final_result);
+            //Check if "current_result" is less than "final_result"
             if (current_result < *final_result) {
                 copy_To_Final(size, current_route, final_route);
                 *final_result = current_result;
             }
-        }
 
-        //After updating "final_result" and "final_route", the "return" statement is executed.
-        //This "return" exits the TSP_Recursion() function and prevents further recursive calls from
-        //being made along this route. This is important, because once all nodes have been visited
-        //and the route cost is calculated, there's no need to continue exploring any further in
-        //this specific branch of recursion:
+        //After updating "final_result" and "final_route"
         return;
-
     }
 
-    //For levels below "size", the function iterates over all nodes (i = 0 to N - 1) to find potential
-    //nodes to visit next:
+    // It all nodes have not been visited
     for (int i = 0; i < size; i++) {
 
-        //It considers node "i" as the next destination if "matrix[current_route[level - 1]][i] is
-        //not 0, meaning there is a route from the current node to node "i" "&&" (AND) if "visited[i]"
-        //is 0, meaning that the node "i" has not been visited
+        // Consider travel cost to the next not visited node
         if (matrix[current_route[level - 1]][i] != 0 && visited[i] == 0) {
 
-            //If the statement is true, which means node "i" is chosen as the next destination, then
-            //"temp" temporarily stores "current_bound" for later backtracking.
-            double temp = current_bound;
+            // Store the current bound in temp
+            double temp = upper_bound;
 
-            //"current_weight" is updated to include the cost of traveling from the current node to
-            //node "i":
+            // Add the cost of traveling to node[i] to current_weight
             current_weight += matrix[current_route[level - 1]][i];
 
-            //If node "level == 1", it uses the first minimum edge cost from the current and next
-            //node:
-            if (level == 1) {
-                current_bound -= (first_minimum(size, matrix, current_route[level - 1])
-                                 + first_minimum(size, matrix, i)) / 2;
+            // Add node[i] to the rute
+            current_route[level] = i;
+            visited[i] = 1;
 
-            //For all other levels, it uses the second minimum edge cost from the current node and
-            //the first minimum for the next node:
-            } else {
-                current_bound -= (second_minimum(size, matrix, current_route[level - 1])
-                                 + first_minimum(size, matrix, i)) / 2;
+            // Calculate upper bound from this position
+            upper_bound = calculate_upper_bound(size, matrix, visited, i);
 
-            }
-            //The previous if-statement adjusts "current_bound" downward, estimating the cost for the
-            //remaining route.
 
-            //Checks if the sum of "current_bound" + "current_weight" is less than "final_results".
-            //printf("Current bound: %d, Current weight: %d, Best distance result so far%d\n", current_bound, current_weight, *final_result);
-            if (current_bound + current_weight < *final_result) {
+            // If true, prune this branch from the tree
+            if (upper_bound + current_weight < *final_result) {
 
-                //If true, it will continue exploring this route so:
-
-                // - "current_route[level] = i": records node "i" in the route:
-                current_route[level] = i;
-
-                // - "visited[i] = 1": marks node "i" as visited:
-                visited[i] = 1;
-
-                // - "TSP_Recursion()": Is called recursively to move to the next level:
-                TSP_Recursion(size, matrix, current_bound, current_weight, level + 1, current_route, final_result, visited, final_route);
-
+                // - "TSP_Recursion()": Is called to move to the next level:
+                TSP_Recursion(size, matrix, upper_bound, current_weight, level + 1,
+                    current_route, final_result, visited, final_route);
             }
 
-            //After exploring a route, the function "backtracks" to restore the state before visiting
-            //node "i":
-
-            //"current_weight" is reduced by the cost of traveling to node "i", and "current_bound" is
-            //reset to "temp".
+            // To prune the branch, backtrack one node
             current_weight -= matrix[current_route[level - 1]][i];
-            current_bound = temp;
-
-            //In the "visited[]" array, the node just backtracked from is reset to mark only nodes up to the current level as visited,
-            //ensuring each recursive call works with an accurate state.
+            upper_bound = temp;
             visited[i] = 0;
         }
-
     }
+}
+
+double calculate_upper_bound(int size, double matrix[size][size], int visited[], int i) {
+    double total_cost = 0;
+    double num_visited = 1;
+    int current_node = i;
+    int MST_visited[size];
+
+    // Copy the current state of visited[] to MST_visited[] for local usa
+    for (int m = 0; m < size; m++) {
+        MST_visited[m] = visited[m];
+    }
+
+    // Run until all nodes have been visited
+    while (num_visited < size) {
+        int nearest_neighbor = -1;
+        double min_cost = MAXFLOAT;
+
+        // Find the nearest unvisited neighbor
+        for (int j = 0; j < size; j++) {
+            if (MST_visited[j] == 0 && matrix[current_node][j] < min_cost) {
+                     min_cost = matrix[current_node][j];
+                      nearest_neighbor = j;
+            }
+        }
+
+            // If all nodes in the spanning graph have been marked as visited
+        if (nearest_neighbor == -1) {
+            break;
+       }
+
+       // Update total cost and move to the nearest neighbor
+       total_cost += min_cost;
+       current_node = nearest_neighbor;
+       MST_visited[current_node] = 1;
+       num_visited++;
+    }
+
+
+    // Add the cost of traveling to node "0"
+    total_cost += matrix[current_node][0];
+    return total_cost;
 }
 
 
@@ -309,7 +162,6 @@ void copy_To_Final(int size, int current_route[], int final_route[]) {
     //completes the route, by returning to the starting node, so "final_route[]" will now represent
     //a full route cycle:
     final_route[size] = current_route[0];
-
 }
 
 

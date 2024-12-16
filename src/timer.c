@@ -5,7 +5,7 @@
 #include "timer.h"
 #include <stdio.h>
 
-//Function that prints the execution time of the program ones finished
+//Function that prints the execution time of the program once finished
 void print_execution_time(clock_t start_time) {
     clock_t end_time = clock(); // Stop the timer
     //  = end_time - start_time

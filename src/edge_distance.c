@@ -44,10 +44,10 @@ void calculate_edges(const int node_count, double matrix[node_count][node_count]
  * @param goal end node
  * @return distance
  */
-int euclidean_distance(const Node start, const Node goal) {
+double euclidean_distance(const Node start, const Node goal) {
         // Using abs() to calculate the absolute difference between 'x' and 'y' coordinates.
-    double dx = (double)goal.x - (double)start.x;
-    double dy = (double)goal.y - (double)start.y;
+    double dx = fabs(goal.x - start.x);
+    double dy = fabs(goal.y - start.y);
 
         // Returning the distance between the two nodes.
             return (sqrt(dx * dx + dy * dy));

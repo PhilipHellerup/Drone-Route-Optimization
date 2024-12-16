@@ -50,8 +50,6 @@ void load_nodes_from_file(const char *inputfile, Node nodes_array[], int node_co
 
     // Setting a buffer to read each line onto, the buffer is set to hold 100 characters
     char buffer[100];
-
-    // Skipping the firs line
     fgets(buffer, 100, fp); // Read and discard the first line
 
     // Iterating over each line, from the second line, and reads each coordinate pair into the nodes_array.
@@ -63,17 +61,14 @@ void load_nodes_from_file(const char *inputfile, Node nodes_array[], int node_co
             fprintf(stderr, "Error: Failed to read line %d from input file\n", i + 1);
             exit(EXIT_FAILURE);
         }
-
         // Scan the coordinates from a line
         if (sscanf(buffer, "%lf,%lf", &x_value, &y_value) != 2) {
             fprintf(stderr, "Error: Line %d is not formatted correctly: %s(should be x_value,y_value)", i + 1, buffer);
             exit(EXIT_FAILURE);
         }
-
         // Round and assign the values to each node
         nodes_array[i].x = (x_value);
         nodes_array[i].y = (y_value);
-
         // Print the node details
         printf("Node %d: (%.3lf, %.3lf)\n", i, nodes_array[i].x, nodes_array[i].y);
     }
