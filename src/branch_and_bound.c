@@ -48,8 +48,22 @@ void TSP(int size, double matrix[size][size], double* final_result, int final_ro
         //of the minimal route cost, which will help the Branch and Bound algorithm in deciding
         //which routes to explore further.
 
-        current_bound += first_minimum(size, matrix, i);
+        // Calculate if edge weight are too high
+        /*double temp_bound = (double)current_bound+
+        (double)first_minimum(size, matrix, i)+
+        (double)second_minimum(size, matrix, i);
+        if (temp_bound > INT32_MAX) {
+            printf("Error: Edge weights are too high");
+            exit(EXIT_FAILURE); // Exit the program
+        }*/
+
+        current_bound += (first_minimum(size, matrix, i) + second_minimum(size, matrix, i));
     }
+
+    //After finding the sum of the edge cost, then "current_bound" is divided by 2 to complete
+    //the bound calculation.
+    current_bound /= 2;
+
 
     //The TSP route is initialized to start from node 0:
     visited[0] = 1;         //visited[0] = 1; marks node 0 as visited.
@@ -223,9 +237,19 @@ void TSP_Recursion(int size, double matrix[size][size], double current_bound, do
             //node "i":
             current_weight += matrix[current_route[level - 1]][i];
 
-            // Subtract the weight of the minimum outgoing edge from node[i]
-            current_bound -= first_minimum(size, matrix, i);
+            //If node "level == 1", it uses the first minimum edge cost from the current and next
+            //node:
+            if (level == 1) {
+                current_bound -= (first_minimum(size, matrix, current_route[level - 1])
+                                 + first_minimum(size, matrix, i)) / 2;
 
+            //For all other levels, it uses the second minimum edge cost from the current node and
+            //the first minimum for the next node:
+            } else {
+                current_bound -= (second_minimum(size, matrix, current_route[level - 1])
+                                 + first_minimum(size, matrix, i)) / 2;
+
+            }
             //The previous if-statement adjusts "current_bound" downward, estimating the cost for the
             //remaining route.
 
