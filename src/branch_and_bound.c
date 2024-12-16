@@ -48,15 +48,6 @@ void TSP(int size, double matrix[size][size], double* final_result, int final_ro
         //of the minimal route cost, which will help the Branch and Bound algorithm in deciding
         //which routes to explore further.
 
-        // Calculate if edge weight are too high
-        /*double temp_bound = (double)current_bound+
-        (double)first_minimum(size, matrix, i)+
-        (double)second_minimum(size, matrix, i);
-        if (temp_bound > INT32_MAX) {
-            printf("Error: Edge weights are too high");
-            exit(EXIT_FAILURE); // Exit the program
-        }*/
-
         current_bound += (first_minimum(size, matrix, i) + second_minimum(size, matrix, i));
     }
 
@@ -192,11 +183,6 @@ void TSP_Recursion(int size, double matrix[size][size], double current_bound, do
         //If "matrix[current_route[level - 1]][current_route[0]]" is not 0 (indicating a route back exist):
         if (matrix[current_route[level - 1]][current_route[0]] != 0) {
 
-            double temp_result = (double)current_weight + (double)matrix[current_route[level - 1]][current_route[0]];
-            if (temp_result > INT32_MAX) {
-                printf("Error: Edge weights are too high");
-                exit(EXIT_FAILURE);
-            }
 
             //Initializing the variable "current_result" to the total cost of the current route, by
             //adding the cost of returning to the starting node.
