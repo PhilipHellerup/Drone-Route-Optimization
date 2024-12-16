@@ -16,7 +16,7 @@
  * @param matrix matrix stores edge weights
  * @param nodes array of all nodes
  */
-void calculate_edges(const int node_count, int matrix[node_count][node_count], Node nodes[]) {
+void calculate_edges(const int node_count, double matrix[node_count][node_count], Node nodes[]) {
     //The two nested loops are used to iterate over every possible pair of nodes "(i, j)", where "i" is the
     //row index and "j" is the column index in the distance matrix:
     for (int i = 0; i < node_count; i++) {
@@ -50,7 +50,7 @@ int euclidean_distance(const Node start, const Node goal) {
     double dy = (double)goal.y - (double)start.y;
 
         // Returning the distance between the two nodes.
-            return (int)(sqrt(dx * dx + dy * dy) + 0.5); // Adding 0,5 before casting to an int, to round to nearest integer
+            return (sqrt(dx * dx + dy * dy));
 }
 //Finding the Euclidean distance between the "start" and "goal" node:
 

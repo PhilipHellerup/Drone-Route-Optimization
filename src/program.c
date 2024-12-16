@@ -38,7 +38,7 @@ int main(void) {
 
     // This function generates a random list of addresses
     // The function uses the filepath and an integer representing the amount of nodes wanted
-    generate_addresses_float(filepath, 30, 400);
+    generate_addresses_float(filepath, 20, 400);
 
     // Get the size of the array, using "get_delivery_point_count()"
     // This function counts the number of nodes in the file
@@ -63,7 +63,7 @@ int main(void) {
                 printf("Error: Graph only has two nodes. \n");
                 exit(EXIT_SUCCESS); // Exit the program
             }
-            default: printf("Unexpected error: node_count is %d which is invalid", node_count);
+            default: printf("Unexpected error: node_count is %lf which is invalid", node_count);
         }
     }
 
@@ -72,7 +72,7 @@ int main(void) {
     // Declaring the 2D-array, "matrix[][]", which is going to represent the graph,
     // with each value inside of matrix[i][j], representing the cost of traveling from node "i" to node "j".
 
-    int matrix[node_count][node_count];
+    double matrix[node_count][node_count];
 
     // Load (x and y) coordinates from file into node in the array.
     load_nodes_from_file(filepath, nodes_array, node_count);
@@ -82,7 +82,7 @@ int main(void) {
 
     // Define variables for final_result, the distance covered, and final_route, an array representing the best route
     // Final_result is set to maximum integer value, and the size of final_route is set to node_count.
-    int final_result = INT_MAX;
+    double final_result = INT_MAX;
     int final_route[node_count];
 
     // Running the TSP() function, with the "matrix[][]" array as an input parameter:
@@ -96,7 +96,7 @@ int main(void) {
     // After the TSP() function completes, main() function outputs the minimum cost and the optimal route:
 
     // Prints the lowest travel cost found.
-    printf("Minimum cost: %d\n", final_result);
+    printf("Minimum cost: %lf\n", final_result);
 
     // Prints the sequence of nodes in the optimal route:
     // This for-loop iterates through the route, showing a complete route cycle,

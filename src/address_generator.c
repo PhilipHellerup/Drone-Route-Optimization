@@ -51,7 +51,7 @@ void generate_addresses_float(const char* filepath, int n, int size) {
         double y = (float)rand()/(float)(RAND_MAX) * size;
 
         // Prints coordinates to the file
-        fprintf(filepointer, "%lf,%lf \n", x,y);
+        fprintf(filepointer, "%.3lf,%.3lf \n", x,y);
     }
     fclose(filepointer);
 }

@@ -2,8 +2,8 @@
 
 //Node struct to hold the coordinates of all the different nodes:
 typedef struct {
-    int x;
-    int y;
+    double x;
+    double y;
 } Node;
 
 //Declaration of function prototypes

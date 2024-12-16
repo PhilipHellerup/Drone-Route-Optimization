@@ -71,10 +71,10 @@ void load_nodes_from_file(const char *inputfile, Node nodes_array[], int node_co
         }
 
         // Round and assign the values to each node
-        nodes_array[i].x = (int)round(x_value);
-        nodes_array[i].y = (int)round(y_value);
+        nodes_array[i].x = (x_value);
+        nodes_array[i].y = (y_value);
 
         // Print the node details
-        printf("Node %d: (%d,%d)\n", i, nodes_array[i].x, nodes_array[i].y);
+        printf("Node %d: (%.3lf, %.3lf)\n", i, nodes_array[i].x, nodes_array[i].y);
     }
 }

@@ -14,7 +14,7 @@
 //the Traveling Salesman Problem (TSP) using the Branch and Bound algorithm. The function initialized
 //the needed structures, calculates the initial bound and starts the recursive exploration to find
 //the optimal route (in this case the fastest route, which means the route that has the lowest cost):
-void TSP(int size, int matrix[size][size],int* final_result, int final_route[]) {
+void TSP(int size, double matrix[size][size], double* final_result, int final_route[]) {
     printf("\033[32;1mLoading ... \033[0m \n");
     fflush(stdout);
 
@@ -29,7 +29,7 @@ void TSP(int size, int matrix[size][size],int* final_result, int final_route[]) 
     //Initializing "current_bound" variable, which represents an initial lower bound of the travel cost.
     //This value helps in excluding routes in the Branch & Bound algorithm, by estimating a minimal
     //possible cost for the current route:
-    int current_bound = 0; //Initially set to 0.
+    double current_bound = 0; //Initially set to 0.
 
     //Sets all the elements in current_route[] to -1, signifying that no nodes have been visited or
     //assigned yet in the current_route[] array:
@@ -61,16 +61,8 @@ void TSP(int size, int matrix[size][size],int* final_result, int final_route[]) 
     }
 
     //After finding the sum of the edge cost, then "current_bound" is divided by 2 to complete
-    //the bound calculation. If "current_bound" is odd, it gets rounded up by adding 1, which
-    //ensures the bound remains an integer. This integer "current_bound", represents the estimated
-    //minimal route cost, from the starting node, which helps the Branch and Bound algorithm in
-    //deciding which specific routes, that need to be excluded/pruned.
-    current_bound = (current_bound & 1) ? current_bound / 2 + 1 : current_bound / 2;
-    //The "&" symbol in this case is not a logical "AND", but a bitwise "AND". This means that in
-    //this case we say that, "current_bound & 1" performs a "Bitwise AND" between "current_bound" and
-    //"1". The number "1" in binary is "0001", which means when "current_bound & 1" is evaluated:
-    // - If the last bit of "current_bound" is "1", the result is "1", meaning "current_bound" is odd.
-    // - If the last bit of "current_bound" is "0", the result is "0", meaning "current_bound" is even.
+    //the bound calculation.
+    current_bound /= 2;
 
 
     //The TSP route is initialized to start from node 0:
@@ -101,7 +93,7 @@ void TSP(int size, int matrix[size][size],int* final_result, int final_route[]) 
 //from node i to node j.
 //i = The index of the node for which we want to find the minimum outgoing edge cost.
 
-int first_minimum(int size, int matrix[size][size], int i) {
+int first_minimum(int size, double matrix[size][size], int i) {
 
     //Initializing the "first" variable to INT_MAX, which is the highest possible integer value. This
     //is to ensure that any smaller value encountered in the loop will replace "first".
@@ -110,7 +102,7 @@ int first_minimum(int size, int matrix[size][size], int i) {
     //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
     //node i to each node j:
     for (int j = 0; j < size; j++) {
-        int value = matrix[i][j];
+        double value = matrix[i][j];
 
         //Checks if "i != j" to exclude self-loops (given that the cost to go from node A to itself is
         //not relevant for this program). It also checks if "matrix[i][j] < first", which means
@@ -139,14 +131,14 @@ int first_minimum(int size, int matrix[size][size], int i) {
 //from node i to node j.
 //i = The index of the node for which we want to find the second minimum outgoing edge cost.
 
-int second_minimum(int size, int matrix[size][size], int i) {
+int second_minimum(int size, double matrix[size][size], int i) {
 
     //Initializing the "first" and "second" variable to INT_MAX, which is the highest possible integer
     //value. "first" will store the smallest outgoing edge cost, and "second" will store the
     //second smallest. INT_MAX is to ensure that any smaller value encountered in the loop will
     //replace "first" or "second", depending on the scenario:
-    int first = INT_MAX;
-    int second = INT_MAX;
+    double first = INT_MAX;
+    double second = INT_MAX;
 
     //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
     //node i to each node j:
@@ -192,7 +184,7 @@ int second_minimum(int size, int matrix[size][size], int i) {
 //solve the Traveling Salesman Problem (TSP). This function explores potential routes recursively,
 //calculates cost, and excludes routes, that is greater in cost than the current best known
 //solution ("final_result"). It updates the best route and cost as it finds better (faster) solutions:
-void TSP_Recursion(int size, int matrix[size][size], int current_bound, int current_weight, int level, int current_route[], int *final_result, int visited[], int final_route[]) {
+void TSP_Recursion(int size, double matrix[size][size], double current_bound, double current_weight, int level, int current_route[], double *final_result, int visited[], int final_route[]) {
     //When "level == size", it means all nodes have been visited:
     if (level == size) {
 
@@ -239,7 +231,7 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
 
             //If the statement is true, which means node "i" is chosen as the next destination, then
             //"temp" temporarily stores "current_bound" for later backtracking.
-            int temp = current_bound;
+            double temp = current_bound;
 
             //"current_weight" is updated to include the cost of traveling from the current node to
             //node "i":
