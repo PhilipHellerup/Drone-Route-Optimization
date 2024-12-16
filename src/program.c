@@ -36,12 +36,9 @@ int main(void) {
     // Store the filepath of the input document in a variable
     const char* filepath = "assets/addresses.csv";
 
-    // Testing
-    //const char* filepath = "test/infi.csv";
-
     // This function generates a random list of addresses
     // The function uses the filepath and an integer representing the amount of nodes wanted
-    generate_addresses_float(filepath, 20, 400);
+    generate_addresses_float(filepath, 30, 400);
 
     // Get the size of the array, using "get_delivery_point_count()"
     // This function counts the number of nodes in the file

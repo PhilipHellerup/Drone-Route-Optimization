@@ -50,7 +50,7 @@ int euclidean_distance(const Node start, const Node goal) {
     double dy = (double)goal.y - (double)start.y;
 
         // Returning the distance between the two nodes.
-            return (int)sqrt(dx * dx + dy * dy) + 0.5; // Adding 0,5 before casting to an int, to round to nearest integer
+            return (int)(sqrt(dx * dx + dy * dy) + 0.5); // Adding 0,5 before casting to an int, to round to nearest integer
 }
 //Finding the Euclidean distance between the "start" and "goal" node:
 

@@ -5,8 +5,7 @@
 #include "load_nodes_from_file.h"
 #include <stdio.h>
 #include <tgmath.h>
-
-#include "../../../../../../Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/stdlib.h"
+#include "stdlib.h"
 
 // This functions takes in the filepath to the input file as its only parameter.
 // Each newline symbol ("\n") is counted, to return the number of nodes in the file

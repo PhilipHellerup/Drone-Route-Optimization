@@ -217,8 +217,6 @@ void TSP_Recursion(int size, int matrix[size][size], int current_bound, int curr
                 copy_To_Final(size, current_route, final_route);
                 *final_result = current_result;
             }
-
-
         }
 
         //After updating "final_result" and "final_route", the "return" statement is executed.
