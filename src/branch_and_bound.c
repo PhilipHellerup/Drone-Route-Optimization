@@ -15,6 +15,8 @@
 //the needed structures, calculates the initial bound and starts the recursive exploration to find
 //the optimal route (in this case the fastest route, which means the route that has the lowest cost):
 void TSP(int size, double matrix[size][size], double* final_result, int final_route[]) {
+
+    // Print "Loading ..." in the console.
     printf("\033[32;1mLoading ... \033[0m \n");
     fflush(stdout);
 
@@ -47,14 +49,11 @@ void TSP(int size, double matrix[size][size], double* final_result, int final_ro
         //outgoing edge cost, to "current_bound". This is to compute a realistic initial estimate
         //of the minimal route cost, which will help the Branch and Bound algorithm in deciding
         //which routes to explore further.
-
         current_bound += (first_minimum(size, matrix, i) + second_minimum(size, matrix, i));
     }
-
     //After finding the sum of the edge cost, then "current_bound" is divided by 2 to complete
     //the bound calculation.
     current_bound /= 2;
-
 
     //The TSP route is initialized to start from node 0:
     visited[0] = 1;         //visited[0] = 1; marks node 0 as visited.
@@ -84,11 +83,11 @@ void TSP(int size, double matrix[size][size], double* final_result, int final_ro
 //from node i to node j.
 //i = The index of the node for which we want to find the minimum outgoing edge cost.
 
-int first_minimum(int size, double matrix[size][size], int i) {
+double first_minimum(int size, double matrix[size][size], int i) {
 
     //Initializing the "first" variable to INT_MAX, which is the highest possible integer value. This
     //is to ensure that any smaller value encountered in the loop will replace "first".
-    int first = INT_MAX;
+    double first = MAXFLOAT;
 
     //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
     //node i to each node j:
@@ -102,7 +101,6 @@ int first_minimum(int size, double matrix[size][size], int i) {
         if (matrix[i][j] < first && i != j) {
             first = matrix[i][j];
         }
-
     }
 
     //Return the integer variable "first", which represents the minimum cost from
@@ -122,14 +120,14 @@ int first_minimum(int size, double matrix[size][size], int i) {
 //from node i to node j.
 //i = The index of the node for which we want to find the second minimum outgoing edge cost.
 
-int second_minimum(int size, double matrix[size][size], int i) {
+double second_minimum(int size, double matrix[size][size], int i) {
 
-    //Initializing the "first" and "second" variable to INT_MAX, which is the highest possible integer
+    //Initializing the "first" and "second" variable to MAXFLOAT, which is the highest possible double
     //value. "first" will store the smallest outgoing edge cost, and "second" will store the
-    //second smallest. INT_MAX is to ensure that any smaller value encountered in the loop will
+    //second smallest. MAXFLOAT is to ensure that any smaller value encountered in the loop will
     //replace "first" or "second", depending on the scenario:
-    double first = INT_MAX;
-    double second = INT_MAX;
+    double first = MAXFLOAT;
+    double second = MAXFLOAT;
 
     //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
     //node i to each node j:
@@ -186,7 +184,7 @@ void TSP_Recursion(int size, double matrix[size][size], double current_bound, do
 
             //Initializing the variable "current_result" to the total cost of the current route, by
             //adding the cost of returning to the starting node.
-            int current_result = current_weight + matrix[current_route[level - 1]][current_route[0]];
+            double current_result = current_weight + matrix[current_route[level - 1]][current_route[0]];
 
             //Check if "current_result" is less than "final_result" (the minimum cost found so far),
             //it updates "final_result" and saves the route by calling/running copy_To_Final() function:
@@ -206,7 +204,7 @@ void TSP_Recursion(int size, double matrix[size][size], double current_bound, do
 
     }
 
-    //For levels below "size", the function iterates over all nodes (i = 0 to N - 1) to find potential
+    //For levels below "size", the function iterates over all nodes (i = 0 to size) to find potential
     //nodes to visit next:
     for (int i = 0; i < size; i++) {
 

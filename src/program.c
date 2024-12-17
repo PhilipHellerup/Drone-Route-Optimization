@@ -38,7 +38,7 @@ int main(void) {
 
     // This function generates a random list of addresses
     // The function uses the filepath and an integer representing the amount of nodes wanted
-    generate_addresses_float(filepath, 20, 2);
+    generate_addresses_float(filepath, 15, 50);
 
     // Get the size of the array, using "get_delivery_point_count()"
     // This function counts the number of nodes in the file
@@ -63,7 +63,7 @@ int main(void) {
                 printf("Error: Graph only has two nodes. \n");
                 exit(EXIT_SUCCESS); // Exit the program
             }
-            default: printf("Unexpected error: node_count is %lf which is invalid", node_count);
+            default: printf("Unexpected error: node_count is %d which is invalid", node_count);
         }
     }
 

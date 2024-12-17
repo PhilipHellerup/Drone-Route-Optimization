@@ -7,13 +7,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//calculate_edges() is the function that fills the distance matrix, which is used by the Branch & Bound
-//algorithm to find the shortest route that visits each node exactly once:
+//calculate_edges() is the function that fills the distance matrix, which is used by the Branch & Bound algorithm
 
 /**
- *
  * @param node_count number of nodes
- * @param matrix matrix stores edge weights
+ * @param matrix matrix to store edge weights
  * @param nodes array of all nodes
  */
 void calculate_edges(const int node_count, double matrix[node_count][node_count], Node nodes[]) {
@@ -38,25 +36,17 @@ void calculate_edges(const int node_count, double matrix[node_count][node_count]
 //euclidean_distance() function calculates the Euclidean distance between two nodes, "start" and "goal",
 //which are represented by the "Node" structs containing "x" and "y" coordinates. The Euclidean distance is
 //the "straight-line" distance between two nodes in a 2D plane:
+
 /**
- *
  * @param start start node
  * @param goal end node
- * @return distance
+ * @return euclidean distance from start of end node
  */
-int euclidean_distance(const Node start, const Node goal) {
+double euclidean_distance(const Node start, const Node goal) {
         // Using abs() to calculate the absolute difference between 'x' and 'y' coordinates.
-    double dx = (double)goal.x - (double)start.x;
-    double dy = (double)goal.y - (double)start.y;
+    double dx = goal.x - start.x;
+    double dy = goal.y - start.y;
 
-        // Returning the distance between the two nodes.
-            return (sqrt(dx * dx + dy * dy));
+        // Returning the distance between the two nodes with Pythagoras theorem
+            return sqrt(dx * dx + dy * dy);
 }
-//Finding the Euclidean distance between the "start" and "goal" node:
-
-//"dx * dx + dy * dy" applies the Pythagorean theorem to find the square of the
-//Euclidean distance. By squaring both "dx" and "dy", then adding the results, we get the square of
-//the straight-line distance.
-
-//The "sqrt()" function takes the square root of the sum, which results in the Euclidean distance between
-//the "start" and "goal" node.
