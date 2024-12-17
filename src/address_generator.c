@@ -1,14 +1,20 @@
-//
-// Created by OEM on 22-11-2024.
-//
 #include <stdio.h>
 #include "address_generator.h"
 #include <time.h>
 #include <stdlib.h>
+
+
+// Function to generate a file with random x and y float coordinates.
+/**
+ * @param filepath Path to the output file.
+ * @param n Number of random coordinate pairs to generate.
+ * @param size Upper limit for the random values.
+ */
 void generate_addresses_float(const char* filepath, int n, int size) {
+    // Open the file in write mode ("w").
     FILE* filepointer = fopen(filepath, "w");
 
-    // If the file is not found, print to the user and EXIT
+    // Check if the file was successfully opened.
     if (!filepointer) {
         printf("Can't open file\n");
         printf("filename %s", filepath);
@@ -16,17 +22,20 @@ void generate_addresses_float(const char* filepath, int n, int size) {
     }
     // Print the header of the file
     fprintf(filepointer, "x-value, y-value \n");
+
+    // Initialize the random number generator using the current time so the numbers generated are different each time the program runs.
     srand(time(NULL));
 
-    // Generate the specified number of coordinate sets
+    // Generate 'n' random coordinate pairs and write them to the file.
     for (int i = 0; i < n; i++) {
-        // Generates random float values from 0 -> size, (Size is specified in the function call)
+        // Generate random floating-point x and y values in the range [0, size].
         double x = (float)rand()/(float)(RAND_MAX) * size;
         double y = (float)rand()/(float)(RAND_MAX) * size;
 
-        // Prints coordinates to the file
+        // Write the generated x and y values to the file with 3 decimal precision.
         fprintf(filepointer, "%.3lf,%.3lf \n", x,y);
     }
+    // Close the file to save all written data and free up system resources.
     fclose(filepointer);
 }
 
