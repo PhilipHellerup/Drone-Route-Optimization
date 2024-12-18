@@ -14,6 +14,14 @@
 //the Traveling Salesman Problem (TSP) using the Branch and Bound algorithm. The function initialized
 //the needed structures, calculates the initial bound and starts the recursive exploration to find
 //the optimal route (in this case the fastest route, which means the route that has the lowest cost):
+
+/**
+ *
+ * @param size Number of nodes. Must be equal to height and width of matrix
+ * @param matrix Pointer to edge distance matrix
+ * @param final_result Pointer to store final result
+ * @param final_route Array to store minimum route
+ */
 void TSP(int size, double matrix[size][size], double* final_result, int final_route[]) {
 
     // Print "Loading ..." in the console.
@@ -78,11 +86,13 @@ void TSP(int size, double matrix[size][size], double* final_result, int final_ro
 //the Traveling Salesman Problem (TSP), which is used to determine if certain routes should be
 //explored further or excluded/pruned:
 
-//Input parameters:
-//matrix[][] = The adjacency matrix of the graph, where matrix[i][j] represent the cost of going
-//from node i to node j.
-//i = The index of the node for which we want to find the minimum outgoing edge cost.
-
+/**
+ *
+ * @param size Number of nodes
+ * @param matrix Pointer to edge distance matrix
+ * @param i Iteration counter from recursion
+ * @return Lowest cost edge from node[i]
+ */
 double first_minimum(int size, double matrix[size][size], int i) {
 
     //Initializing the "first" variable to INT_MAX, which is the highest possible integer value. This
@@ -115,11 +125,13 @@ double first_minimum(int size, double matrix[size][size], int i) {
 //the Traveling Salesman (TSP) by providing additional information about the second-lowest cost edge,
 //which helps to better estimate the minimum cost for a route.
 
-//Input parameters:
-//matrix[][] = The adjacency matrix of the graph, where matrix[i][j] represent the cost of going
-//from node i to node j.
-//i = The index of the node for which we want to find the second minimum outgoing edge cost.
-
+/**
+ *
+ * @param size Number of nodes
+ * @param matrix Pointer to edge distance matrix
+ * @param i Iteration counter from recursion
+ * @return Second-lowest cost edge from node[i]
+ */
 double second_minimum(int size, double matrix[size][size], int i) {
 
     //Initializing the "first" and "second" variable to MAXFLOAT, which is the highest possible double
@@ -173,6 +185,18 @@ double second_minimum(int size, double matrix[size][size], int i) {
 //solve the Traveling Salesman Problem (TSP). This function explores potential routes recursively,
 //calculates cost, and excludes routes, that is greater in cost than the current best known
 //solution ("final_result"). It updates the best route and cost as it finds better (faster) solutions:
+/**
+ *
+ * @param size Number of nodes
+ * @param matrix Edge distance matrix
+ * @param current_bound Current bound
+ * @param current_weight Total travel cost so far
+ * @param level Search level in the tree
+ * @param current_route Current search route
+ * @param final_result Lowest full path cost so far
+ * @param visited Array of visited nodes
+ * @param final_route Lowest cost final route so far
+ */
 void TSP_Recursion(int size, double matrix[size][size], double current_bound, double current_weight, int level, int current_route[], double *final_result, int visited[], int final_route[]) {
     //When "level == size", it means all nodes have been visited:
     if (level == size) {
@@ -276,9 +300,12 @@ void TSP_Recursion(int size, double matrix[size][size], double current_bound, do
 //This function is called whenever the algorithm finds a complete route with a lower cost than the
 //current minimum ("final_result"), so that the best solution is always saved:
 
-//Input parameters:
-//current_route[] = Holds the current route.
-
+/**
+ *
+ * @param size Number of nodes
+ * @param current_route Current search route
+ * @param final_route Lowest cost total route so far
+ */
 void copy_To_Final(int size, int current_route[], int final_route[]) {
 
     //This for-loop copies each node from "current_route[]" to "final_route[]". Iterates through

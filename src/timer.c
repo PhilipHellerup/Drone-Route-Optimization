@@ -2,6 +2,10 @@
 #include <stdio.h>
 
 // It takes the starting time (start_time) as input.
+/**
+ * 
+ * @param start_time Time when the clock was started
+ */
 void print_execution_time(clock_t start_time) {
 
     // Record the end time using clock() function.

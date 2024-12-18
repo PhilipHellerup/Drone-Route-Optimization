@@ -11,6 +11,11 @@
 // Each newline symbol ("\n") is counted, to return the number of nodes in the file
 // Hence the last row does not contain a newline, we do not skip the header row.
 
+/**
+ *
+ * @param filename Pointer to input file
+ * @return Total number of nodes/ rows in the file. Excluding the header row
+ */
 int get_node_count(const char *filename) {
     // Using the implemented FILE struct from C to create a pointer to a files location
     FILE* filepointer = fopen(filename, "r");
@@ -37,6 +42,12 @@ int get_node_count(const char *filename) {
 
 // This function takes in the filepath og the inputfile, the nodes array, and the node_count as parameters
 // Each line of the input file is read using fgets() and sscanf(), to give a value to each node in the nodes_array
+/**
+ *
+ * @param inputfile Pointer to inputfile
+ * @param nodes_array Array to store all nodes
+ * @param node_count Node count
+ */
 void load_nodes_from_file(const char *inputfile, Node nodes_array[], int node_count) {
     // Using the implemented FILE struct from C to create a pointer to a files location
     FILE* fp = fopen(inputfile, "r");
