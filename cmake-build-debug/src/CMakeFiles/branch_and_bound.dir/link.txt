@@ -1,2 +1,2 @@
-C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc libbranch_and_bound.a CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj
-C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ranlib.exe libbranch_and_bound.a
+C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\ar.exe qc libbranch_and_bound.a CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj
+C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\ranlib.exe libbranch_and_bound.a

@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Programmer Main\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Programmer Main\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Anders\CLionProjects\P1-Project-Program-In-C
+CMAKE_SOURCE_DIR = "C:\Users\phili\CLionProjects\P1 Final Program"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/branch_and_bound.dir/depend.make
@@ -70,33 +70,33 @@ include src/CMakeFiles/branch_and_bound.dir/flags.make
 
 src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj: src/CMakeFiles/branch_and_bound.dir/flags.make
 src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj: src/CMakeFiles/branch_and_bound.dir/includes_C.rsp
-src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj: C:/Users/Anders/CLionProjects/P1-Project-Program-In-C/src/branch_and_bound.c
+src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj: C:/Users/phili/CLionProjects/P1\ Final\ Program/src/branch_and_bound.c
 src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj: src/CMakeFiles/branch_and_bound.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj -MF CMakeFiles\branch_and_bound.dir\branch_and_bound.c.obj.d -o CMakeFiles\branch_and_bound.dir\branch_and_bound.c.obj -c C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\branch_and_bound.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj"
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj -MF CMakeFiles\branch_and_bound.dir\branch_and_bound.c.obj.d -o CMakeFiles\branch_and_bound.dir\branch_and_bound.c.obj -c "C:\Users\phili\CLionProjects\P1 Final Program\src\branch_and_bound.c"
 
 src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/branch_and_bound.dir/branch_and_bound.c.i"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\branch_and_bound.c > CMakeFiles\branch_and_bound.dir\branch_and_bound.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\phili\CLionProjects\P1 Final Program\src\branch_and_bound.c" > CMakeFiles\branch_and_bound.dir\branch_and_bound.c.i
 
 src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\branch_and_bound.c -o CMakeFiles\branch_and_bound.dir\branch_and_bound.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\phili\CLionProjects\P1 Final Program\src\branch_and_bound.c" -o CMakeFiles\branch_and_bound.dir\branch_and_bound.c.s
 
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj: src/CMakeFiles/branch_and_bound.dir/flags.make
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj: src/CMakeFiles/branch_and_bound.dir/includes_C.rsp
-src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj: C:/Users/Anders/CLionProjects/P1-Project-Program-In-C/src/load_nodes_from_file.c
+src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj: C:/Users/phili/CLionProjects/P1\ Final\ Program/src/load_nodes_from_file.c
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj: src/CMakeFiles/branch_and_bound.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj -MF CMakeFiles\branch_and_bound.dir\load_nodes_from_file.c.obj.d -o CMakeFiles\branch_and_bound.dir\load_nodes_from_file.c.obj -c C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\load_nodes_from_file.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj"
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj -MF CMakeFiles\branch_and_bound.dir\load_nodes_from_file.c.obj.d -o CMakeFiles\branch_and_bound.dir\load_nodes_from_file.c.obj -c "C:\Users\phili\CLionProjects\P1 Final Program\src\load_nodes_from_file.c"
 
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\load_nodes_from_file.c > CMakeFiles\branch_and_bound.dir\load_nodes_from_file.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\phili\CLionProjects\P1 Final Program\src\load_nodes_from_file.c" > CMakeFiles\branch_and_bound.dir\load_nodes_from_file.c.i
 
 src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\load_nodes_from_file.c -o CMakeFiles\branch_and_bound.dir\load_nodes_from_file.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\phili\CLionProjects\P1 Final Program\src\load_nodes_from_file.c" -o CMakeFiles\branch_and_bound.dir\load_nodes_from_file.c.s
 
 # Object files for target branch_and_bound
 branch_and_bound_OBJECTS = \
@@ -110,19 +110,19 @@ src/libbranch_and_bound.a: src/CMakeFiles/branch_and_bound.dir/branch_and_bound.
 src/libbranch_and_bound.a: src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj
 src/libbranch_and_bound.a: src/CMakeFiles/branch_and_bound.dir/build.make
 src/libbranch_and_bound.a: src/CMakeFiles/branch_and_bound.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libbranch_and_bound.a"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && $(CMAKE_COMMAND) -P CMakeFiles\branch_and_bound.dir\cmake_clean_target.cmake
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\branch_and_bound.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libbranch_and_bound.a"
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && $(CMAKE_COMMAND) -P CMakeFiles\branch_and_bound.dir\cmake_clean_target.cmake
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\branch_and_bound.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/branch_and_bound.dir/build: src/libbranch_and_bound.a
 .PHONY : src/CMakeFiles/branch_and_bound.dir/build
 
 src/CMakeFiles/branch_and_bound.dir/clean:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && $(CMAKE_COMMAND) -P CMakeFiles\branch_and_bound.dir\cmake_clean.cmake
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && $(CMAKE_COMMAND) -P CMakeFiles\branch_and_bound.dir\cmake_clean.cmake
 .PHONY : src/CMakeFiles/branch_and_bound.dir/clean
 
 src/CMakeFiles/branch_and_bound.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Anders\CLionProjects\P1-Project-Program-In-C C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src\CMakeFiles\branch_and_bound.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\phili\CLionProjects\P1 Final Program" "C:\Users\phili\CLionProjects\P1 Final Program\src" "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug" "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\src" "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\src\CMakeFiles\branch_and_bound.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/branch_and_bound.dir/depend
 

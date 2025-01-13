@@ -5,6 +5,7 @@
 #include <limits.h>
 #include "branch_and_bound.h"
 
+#include <float.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <tgmath.h>
@@ -97,7 +98,7 @@ double first_minimum(int size, double matrix[size][size], int i) {
 
     //Initializing the "first" variable to INT_MAX, which is the highest possible integer value. This
     //is to ensure that any smaller value encountered in the loop will replace "first".
-    double first = MAXFLOAT;
+    double first = FLT_MAX;
 
     //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
     //node i to each node j:
@@ -138,8 +139,8 @@ double second_minimum(int size, double matrix[size][size], int i) {
     //value. "first" will store the smallest outgoing edge cost, and "second" will store the
     //second smallest. MAXFLOAT is to ensure that any smaller value encountered in the loop will
     //replace "first" or "second", depending on the scenario:
-    double first = MAXFLOAT;
-    double second = MAXFLOAT;
+    double first = FLT_MAX;
+    double second = FLT_MAX;
 
     //This for-loop iterates over all nodes (j from 0 to N-1 (j < N)) to check travel cost from
     //node i to each node j:

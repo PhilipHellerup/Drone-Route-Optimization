@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Programmer Main\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Programmer Main\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Anders\CLionProjects\P1-Project-Program-In-C
+CMAKE_SOURCE_DIR = "C:\Users\phili\CLionProjects\P1 Final Program"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-b
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Programmer Main\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Programmer Main\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,14 +86,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src\\CMakeFiles\progress.marks
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\src\\CMakeFiles\progress.marks"
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/clean
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,22 +102,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/preinstall
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/preinstall
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/edge_distance.dir/rule:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/edge_distance.dir/rule
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/edge_distance.dir/rule
 .PHONY : src/CMakeFiles/edge_distance.dir/rule
 
 # Convenience name for target.
@@ -126,12 +126,12 @@ edge_distance: src/CMakeFiles/edge_distance.dir/rule
 
 # fast build rule for target.
 edge_distance/fast:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/build
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/build
 .PHONY : edge_distance/fast
 
 # Convenience name for target.
 src/CMakeFiles/branch_and_bound.dir/rule:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/branch_and_bound.dir/rule
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/branch_and_bound.dir/rule
 .PHONY : src/CMakeFiles/branch_and_bound.dir/rule
 
 # Convenience name for target.
@@ -140,12 +140,12 @@ branch_and_bound: src/CMakeFiles/branch_and_bound.dir/rule
 
 # fast build rule for target.
 branch_and_bound/fast:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/build
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/build
 .PHONY : branch_and_bound/fast
 
 # Convenience name for target.
 src/CMakeFiles/program.dir/rule:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/program.dir/rule
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/program.dir/rule
 .PHONY : src/CMakeFiles/program.dir/rule
 
 # Convenience name for target.
@@ -154,7 +154,7 @@ program: src/CMakeFiles/program.dir/rule
 
 # fast build rule for target.
 program/fast:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/build
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/build
 .PHONY : program/fast
 
 address_generator.obj: address_generator.c.obj
@@ -162,7 +162,7 @@ address_generator.obj: address_generator.c.obj
 
 # target to build an object file
 address_generator.c.obj:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/address_generator.c.obj
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/address_generator.c.obj
 .PHONY : address_generator.c.obj
 
 address_generator.i: address_generator.c.i
@@ -170,7 +170,7 @@ address_generator.i: address_generator.c.i
 
 # target to preprocess a source file
 address_generator.c.i:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/address_generator.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/address_generator.c.i
 .PHONY : address_generator.c.i
 
 address_generator.s: address_generator.c.s
@@ -178,7 +178,7 @@ address_generator.s: address_generator.c.s
 
 # target to generate assembly for a file
 address_generator.c.s:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/address_generator.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/address_generator.c.s
 .PHONY : address_generator.c.s
 
 branch_and_bound.obj: branch_and_bound.c.obj
@@ -186,7 +186,7 @@ branch_and_bound.obj: branch_and_bound.c.obj
 
 # target to build an object file
 branch_and_bound.c.obj:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.obj
 .PHONY : branch_and_bound.c.obj
 
 branch_and_bound.i: branch_and_bound.c.i
@@ -194,7 +194,7 @@ branch_and_bound.i: branch_and_bound.c.i
 
 # target to preprocess a source file
 branch_and_bound.c.i:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.i
 .PHONY : branch_and_bound.c.i
 
 branch_and_bound.s: branch_and_bound.c.s
@@ -202,7 +202,7 @@ branch_and_bound.s: branch_and_bound.c.s
 
 # target to generate assembly for a file
 branch_and_bound.c.s:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/branch_and_bound.c.s
 .PHONY : branch_and_bound.c.s
 
 edge_distance.obj: edge_distance.c.obj
@@ -210,7 +210,7 @@ edge_distance.obj: edge_distance.c.obj
 
 # target to build an object file
 edge_distance.c.obj:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/edge_distance.c.obj
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/edge_distance.c.obj
 .PHONY : edge_distance.c.obj
 
 edge_distance.i: edge_distance.c.i
@@ -218,7 +218,7 @@ edge_distance.i: edge_distance.c.i
 
 # target to preprocess a source file
 edge_distance.c.i:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/edge_distance.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/edge_distance.c.i
 .PHONY : edge_distance.c.i
 
 edge_distance.s: edge_distance.c.s
@@ -226,7 +226,7 @@ edge_distance.s: edge_distance.c.s
 
 # target to generate assembly for a file
 edge_distance.c.s:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/edge_distance.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/edge_distance.c.s
 .PHONY : edge_distance.c.s
 
 load_nodes_from_file.obj: load_nodes_from_file.c.obj
@@ -234,9 +234,9 @@ load_nodes_from_file.obj: load_nodes_from_file.c.obj
 
 # target to build an object file
 load_nodes_from_file.c.obj:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.obj
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/load_nodes_from_file.c.obj
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.obj
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.obj
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/load_nodes_from_file.c.obj
 .PHONY : load_nodes_from_file.c.obj
 
 load_nodes_from_file.i: load_nodes_from_file.c.i
@@ -244,9 +244,9 @@ load_nodes_from_file.i: load_nodes_from_file.c.i
 
 # target to preprocess a source file
 load_nodes_from_file.c.i:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.i
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/load_nodes_from_file.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/load_nodes_from_file.c.i
 .PHONY : load_nodes_from_file.c.i
 
 load_nodes_from_file.s: load_nodes_from_file.c.s
@@ -254,9 +254,9 @@ load_nodes_from_file.s: load_nodes_from_file.c.s
 
 # target to generate assembly for a file
 load_nodes_from_file.c.s:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.s
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/load_nodes_from_file.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\edge_distance.dir\build.make src/CMakeFiles/edge_distance.dir/load_nodes_from_file.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\branch_and_bound.dir\build.make src/CMakeFiles/branch_and_bound.dir/load_nodes_from_file.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/load_nodes_from_file.c.s
 .PHONY : load_nodes_from_file.c.s
 
 program.obj: program.c.obj
@@ -264,7 +264,7 @@ program.obj: program.c.obj
 
 # target to build an object file
 program.c.obj:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/program.c.obj
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/program.c.obj
 .PHONY : program.c.obj
 
 program.i: program.c.i
@@ -272,7 +272,7 @@ program.i: program.c.i
 
 # target to preprocess a source file
 program.c.i:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/program.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/program.c.i
 .PHONY : program.c.i
 
 program.s: program.c.s
@@ -280,7 +280,7 @@ program.s: program.c.s
 
 # target to generate assembly for a file
 program.c.s:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/program.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/program.c.s
 .PHONY : program.c.s
 
 timer.obj: timer.c.obj
@@ -288,7 +288,7 @@ timer.obj: timer.c.obj
 
 # target to build an object file
 timer.c.obj:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/timer.c.obj
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/timer.c.obj
 .PHONY : timer.c.obj
 
 timer.i: timer.c.i
@@ -296,7 +296,7 @@ timer.i: timer.c.i
 
 # target to preprocess a source file
 timer.c.i:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/timer.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/timer.c.i
 .PHONY : timer.c.i
 
 timer.s: timer.c.s
@@ -304,7 +304,7 @@ timer.s: timer.c.s
 
 # target to generate assembly for a file
 timer.c.s:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/timer.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\program.dir\build.make src/CMakeFiles/program.dir/timer.c.s
 .PHONY : timer.c.s
 
 # Help Target
@@ -347,6 +347,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Programmer Main\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Programmer Main\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Anders\CLionProjects\P1-Project-Program-In-C
+CMAKE_SOURCE_DIR = "C:\Users\phili\CLionProjects\P1 Final Program"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/program.dir/depend.make
@@ -70,63 +70,63 @@ include src/CMakeFiles/program.dir/flags.make
 
 src/CMakeFiles/program.dir/program.c.obj: src/CMakeFiles/program.dir/flags.make
 src/CMakeFiles/program.dir/program.c.obj: src/CMakeFiles/program.dir/includes_C.rsp
-src/CMakeFiles/program.dir/program.c.obj: C:/Users/Anders/CLionProjects/P1-Project-Program-In-C/src/program.c
+src/CMakeFiles/program.dir/program.c.obj: C:/Users/phili/CLionProjects/P1\ Final\ Program/src/program.c
 src/CMakeFiles/program.dir/program.c.obj: src/CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/program.dir/program.c.obj"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/program.c.obj -MF CMakeFiles\program.dir\program.c.obj.d -o CMakeFiles\program.dir\program.c.obj -c C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\program.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/program.dir/program.c.obj"
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/program.c.obj -MF CMakeFiles\program.dir\program.c.obj.d -o CMakeFiles\program.dir\program.c.obj -c "C:\Users\phili\CLionProjects\P1 Final Program\src\program.c"
 
 src/CMakeFiles/program.dir/program.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/program.dir/program.c.i"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\program.c > CMakeFiles\program.dir\program.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\phili\CLionProjects\P1 Final Program\src\program.c" > CMakeFiles\program.dir\program.c.i
 
 src/CMakeFiles/program.dir/program.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/program.dir/program.c.s"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\program.c -o CMakeFiles\program.dir\program.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\phili\CLionProjects\P1 Final Program\src\program.c" -o CMakeFiles\program.dir\program.c.s
 
 src/CMakeFiles/program.dir/load_nodes_from_file.c.obj: src/CMakeFiles/program.dir/flags.make
 src/CMakeFiles/program.dir/load_nodes_from_file.c.obj: src/CMakeFiles/program.dir/includes_C.rsp
-src/CMakeFiles/program.dir/load_nodes_from_file.c.obj: C:/Users/Anders/CLionProjects/P1-Project-Program-In-C/src/load_nodes_from_file.c
+src/CMakeFiles/program.dir/load_nodes_from_file.c.obj: C:/Users/phili/CLionProjects/P1\ Final\ Program/src/load_nodes_from_file.c
 src/CMakeFiles/program.dir/load_nodes_from_file.c.obj: src/CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/program.dir/load_nodes_from_file.c.obj"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/load_nodes_from_file.c.obj -MF CMakeFiles\program.dir\load_nodes_from_file.c.obj.d -o CMakeFiles\program.dir\load_nodes_from_file.c.obj -c C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\load_nodes_from_file.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/program.dir/load_nodes_from_file.c.obj"
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/load_nodes_from_file.c.obj -MF CMakeFiles\program.dir\load_nodes_from_file.c.obj.d -o CMakeFiles\program.dir\load_nodes_from_file.c.obj -c "C:\Users\phili\CLionProjects\P1 Final Program\src\load_nodes_from_file.c"
 
 src/CMakeFiles/program.dir/load_nodes_from_file.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/program.dir/load_nodes_from_file.c.i"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\load_nodes_from_file.c > CMakeFiles\program.dir\load_nodes_from_file.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\phili\CLionProjects\P1 Final Program\src\load_nodes_from_file.c" > CMakeFiles\program.dir\load_nodes_from_file.c.i
 
 src/CMakeFiles/program.dir/load_nodes_from_file.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/program.dir/load_nodes_from_file.c.s"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\load_nodes_from_file.c -o CMakeFiles\program.dir\load_nodes_from_file.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\phili\CLionProjects\P1 Final Program\src\load_nodes_from_file.c" -o CMakeFiles\program.dir\load_nodes_from_file.c.s
 
 src/CMakeFiles/program.dir/address_generator.c.obj: src/CMakeFiles/program.dir/flags.make
 src/CMakeFiles/program.dir/address_generator.c.obj: src/CMakeFiles/program.dir/includes_C.rsp
-src/CMakeFiles/program.dir/address_generator.c.obj: C:/Users/Anders/CLionProjects/P1-Project-Program-In-C/src/address_generator.c
+src/CMakeFiles/program.dir/address_generator.c.obj: C:/Users/phili/CLionProjects/P1\ Final\ Program/src/address_generator.c
 src/CMakeFiles/program.dir/address_generator.c.obj: src/CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/program.dir/address_generator.c.obj"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/address_generator.c.obj -MF CMakeFiles\program.dir\address_generator.c.obj.d -o CMakeFiles\program.dir\address_generator.c.obj -c C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\address_generator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/program.dir/address_generator.c.obj"
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/address_generator.c.obj -MF CMakeFiles\program.dir\address_generator.c.obj.d -o CMakeFiles\program.dir\address_generator.c.obj -c "C:\Users\phili\CLionProjects\P1 Final Program\src\address_generator.c"
 
 src/CMakeFiles/program.dir/address_generator.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/program.dir/address_generator.c.i"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\address_generator.c > CMakeFiles\program.dir\address_generator.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\phili\CLionProjects\P1 Final Program\src\address_generator.c" > CMakeFiles\program.dir\address_generator.c.i
 
 src/CMakeFiles/program.dir/address_generator.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/program.dir/address_generator.c.s"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\address_generator.c -o CMakeFiles\program.dir\address_generator.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\phili\CLionProjects\P1 Final Program\src\address_generator.c" -o CMakeFiles\program.dir\address_generator.c.s
 
 src/CMakeFiles/program.dir/timer.c.obj: src/CMakeFiles/program.dir/flags.make
 src/CMakeFiles/program.dir/timer.c.obj: src/CMakeFiles/program.dir/includes_C.rsp
-src/CMakeFiles/program.dir/timer.c.obj: C:/Users/Anders/CLionProjects/P1-Project-Program-In-C/src/timer.c
+src/CMakeFiles/program.dir/timer.c.obj: C:/Users/phili/CLionProjects/P1\ Final\ Program/src/timer.c
 src/CMakeFiles/program.dir/timer.c.obj: src/CMakeFiles/program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/CMakeFiles/program.dir/timer.c.obj"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/timer.c.obj -MF CMakeFiles\program.dir\timer.c.obj.d -o CMakeFiles\program.dir\timer.c.obj -c C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\timer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/CMakeFiles/program.dir/timer.c.obj"
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/program.dir/timer.c.obj -MF CMakeFiles\program.dir\timer.c.obj.d -o CMakeFiles\program.dir\timer.c.obj -c "C:\Users\phili\CLionProjects\P1 Final Program\src\timer.c"
 
 src/CMakeFiles/program.dir/timer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/program.dir/timer.c.i"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\timer.c > CMakeFiles\program.dir\timer.c.i
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\phili\CLionProjects\P1 Final Program\src\timer.c" > CMakeFiles\program.dir\timer.c.i
 
 src/CMakeFiles/program.dir/timer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/program.dir/timer.c.s"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src\timer.c -o CMakeFiles\program.dir\timer.c.s
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\phili\CLionProjects\P1 Final Program\src\timer.c" -o CMakeFiles\program.dir\timer.c.s
 
 # Object files for target program
 program_OBJECTS = \
@@ -148,18 +148,18 @@ src/program.exe: src/libbranch_and_bound.a
 src/program.exe: src/CMakeFiles/program.dir/linkLibs.rsp
 src/program.exe: src/CMakeFiles/program.dir/objects1.rsp
 src/program.exe: src/CMakeFiles/program.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable program.exe"
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\program.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable program.exe"
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\program.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/program.dir/build: src/program.exe
 .PHONY : src/CMakeFiles/program.dir/build
 
 src/CMakeFiles/program.dir/clean:
-	cd /d C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src && $(CMAKE_COMMAND) -P CMakeFiles\program.dir\cmake_clean.cmake
+	cd /d C:\Users\phili\CLIONP~1\P1FINA~1\CMAKE-~1\src && $(CMAKE_COMMAND) -P CMakeFiles\program.dir\cmake_clean.cmake
 .PHONY : src/CMakeFiles/program.dir/clean
 
 src/CMakeFiles/program.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Anders\CLionProjects\P1-Project-Program-In-C C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\src C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src C:\Users\Anders\CLionProjects\P1-Project-Program-In-C\cmake-build-debug\src\CMakeFiles\program.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\phili\CLionProjects\P1 Final Program" "C:\Users\phili\CLionProjects\P1 Final Program\src" "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug" "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\src" "C:\Users\phili\CLionProjects\P1 Final Program\cmake-build-debug\src\CMakeFiles\program.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/program.dir/depend
 

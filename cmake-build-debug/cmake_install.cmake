@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Anders/CLionProjects/P1-Project-Program-In-C
+# Install script for directory: C:/Users/phili/CLionProjects/P1 Final Program
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Programmer Main/JetBrains/CLion 2024.2.1/bin/mingw/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Anders/CLionProjects/P1-Project-Program-In-C/cmake-build-debug/src/cmake_install.cmake")
+  include("C:/Users/phili/CLionProjects/P1 Final Program/cmake-build-debug/src/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Anders/CLionProjects/P1-Project-Program-In-C/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/phili/CLionProjects/P1 Final Program/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

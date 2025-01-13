@@ -1,2 +1,2 @@
-C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc libedge_distance.a CMakeFiles/edge_distance.dir/edge_distance.c.obj CMakeFiles/edge_distance.dir/load_nodes_from_file.c.obj
-C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ranlib.exe libedge_distance.a
+C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\ar.exe qc libedge_distance.a CMakeFiles/edge_distance.dir/edge_distance.c.obj CMakeFiles/edge_distance.dir/load_nodes_from_file.c.obj
+C:\PROGRA~4\JETBRA~1\CLION2~1.1\bin\mingw\bin\ranlib.exe libedge_distance.a
