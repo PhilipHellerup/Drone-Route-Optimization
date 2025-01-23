@@ -204,7 +204,7 @@ void TSP_Recursion(int size, double matrix[size][size], double current_bound, do
 
         //Checks if there's a route back to the starting node (ensuring the route is a complete cycle).
         //If "matrix[current_route[level - 1]][current_route[0]]" is not 0 (indicating a route back exist):
-        if (matrix[current_route[level - 1]][current_route[0]] != 0) {
+        if (matrix[current_route[level - 1]][current_route[0]] != 0) { //This dont matter!
 
 
             //Initializing the variable "current_result" to the total cost of the current route, by
@@ -229,31 +229,24 @@ void TSP_Recursion(int size, double matrix[size][size], double current_bound, do
 
     }
 
-    //For levels below "size", the function iterates over all nodes (i = 0 to size) to find potential
-    //nodes to visit next:
+    // If all nodes have not been visited
     for (int i = 0; i < size; i++) {
 
-        //It considers node "i" as the next destination if "matrix[current_route[level - 1]][i] is
-        //not 0, meaning there is a route from the current node to node "i" "&&" (AND) if "visited[i]"
-        //is 0, meaning that the node "i" has not been visited
+        // Consider Travel cost to the next visited node
         if (matrix[current_route[level - 1]][i] != 0 && visited[i] == 0) {
 
-            //If the statement is true, which means node "i" is chosen as the next destination, then
-            //"temp" temporarily stores "current_bound" for later backtracking.
+            // Store the current_bound in temp
             double temp = current_bound;
 
-            //"current_weight" is updated to include the cost of traveling from the current node to
-            //node "i":
+            // Add the cost of traveling to node[i] to current_weight
             current_weight += matrix[current_route[level - 1]][i];
 
-            //If node "level == 1", it uses the first minimum edge cost from the current and next
-            //node:
+            // Subtract average of the first- and first-minimum outgoing edge of node[i]
             if (level == 1) {
                 current_bound -= (first_minimum(size, matrix, current_route[level - 1])
                                  + first_minimum(size, matrix, i)) / 2;
 
-            //For all other levels, it uses the second minimum edge cost from the current node and
-            //the first minimum for the next node:
+            // Subtract average of the first- and second-minimum outgoing edge of node[i]
             } else {
                 current_bound -= (second_minimum(size, matrix, current_route[level - 1])
                                  + first_minimum(size, matrix, i)) / 2;
