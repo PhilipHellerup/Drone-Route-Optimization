@@ -18,10 +18,10 @@ Delivery locations are represented as coordinates in a complete weighted graph. 
 
 ## Technologies & Concepts
 
-**Technologies:** 
+**Technologies:**\
 C, CMake, Git, GitHub, CLion.
 
-**Concepts:** 
+**Concepts:**\
 Traveling Salesman Problem, Branch and Bound, Graph Theory, Adjacency Matrices, Euclidean Distance, Recursion, Backtracking.
 
 ## Contributors
