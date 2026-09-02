@@ -38,5 +38,3 @@ Developed as a group project by:
 The accompanying report, **[Pathfinding Algorithm for Drone Delivery Using Branch and Bound Method](docs/P1-Project-Report.pdf)**, covers the problem analysis, theoretical foundation, algorithm design, implementation, and evaluation of the solution.
 
 *1st Semester Software Engineering Project - Aalborg University - 2024*
-
-Aalborg University
