@@ -1,4 +1,4 @@
-//Libraries Needed:
+// Libraries and header files are included to provide necessary functions and definitions for the program.
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>

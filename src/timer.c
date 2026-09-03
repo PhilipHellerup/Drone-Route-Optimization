@@ -1,9 +1,9 @@
+// Library for measuring execution time of a program or a specific code block.
 #include "timer.h"
 #include <stdio.h>
 
 // It takes the starting time (start_time) as input.
 /**
- * 
  * @param start_time Time when the clock was started
  */
 void print_execution_time(clock_t start_time) {
